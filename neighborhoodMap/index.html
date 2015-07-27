@@ -3,11 +3,28 @@
 <head>
 	<title>Neighborhood Map</title>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-
-	<script src="script/app.js" type="text/javascript"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+	<script src="script/library/jquery.min.js" type="text/javascript"></script>
+	<script src="script/library/knockout-3.3.0.js" type="text/javascript"></script>
+	<script src="script/koversion.js" type="text/javascript"></script>
 </head>
 <body>
-	<div id="map-canvas"></div>
+	<div class="container">
+		<div class="nav">
+				<form id="form-container" class="form-container" data-bind="submit: newHome">
+					<label for="address">Address: </label>
+					<input type="text" placeholder="Enter the address you want to lookup..." name="address" id="address" size=80 autofocus=true>
+					<button type="button" name="submit">Search</button>
+				</form>
+		</div>
+		<div class="main">
+			<div id="listView">
+			</div>
+			<div id="map-canvas">
+			</div>
+		</div>
+	</div>
 </body>
 </html>
