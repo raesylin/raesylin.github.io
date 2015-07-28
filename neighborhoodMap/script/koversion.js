@@ -23,6 +23,7 @@ var myLatLng = function(location) {
 };
 
 var getDateRange = function(range) {
+
 	var today_in_sec = new Date(Date.now());
 	var endday_in_sec = new Date(today_in_sec - range * 24 * 3600);
 
@@ -75,7 +76,7 @@ var mapViewModel = function() {
 					position: results[0].geometry.location,
 					title: "Your new home",
 				});
-				self.callCrime(self.coordinate);
+				self.showCrimeMap(self.coordinate);
 			} else {
 				alert('Geocode was not successful for the following reason: ' + status);
 			};
@@ -87,13 +88,14 @@ var mapViewModel = function() {
 	// Crime map
 	// 
 
-	this.callCrime = function(latlng) {
+	this.showCrimeMap = function(latlng) {
 		$.ajax({
 			url: 'https://jgentes-Crime-Data-v1.p.mashape.com/crime?enddate='+this.endDate+'&lat='+latlng.lat+'&long='+latlng.lng+'&startdate='+this.startDate,
 			type: 'GET',
 			dataType: 'json',
 			success: function(data) {
 				var crimeData = processCrimeLoc(data);
+				console.log(data.length);
 				var pointArray = new google.maps.MVCArray(crimeData);
 				self.heatmap = new google.maps.visualization.HeatmapLayer({
     				data: pointArray
@@ -105,8 +107,13 @@ var mapViewModel = function() {
 				xhr.setRequestHeader("X-Mashape-Authorization", "a5axdWoV2Xmshmoa205omjGF3NZop14QCAsjsnQN5GoFAOSzBl");
 			}
 		});
-
 	};
+
+	// Get new center after moving map and request new crime data
+	// google.maps.event.addListener(self.map, 'center_changed', function() {
+
+	// 	// self.showCrimeMap(self.map.getCenter);
+	// });
 
 };
 
