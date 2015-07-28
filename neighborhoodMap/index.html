@@ -5,7 +5,7 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization"></script>
 	<script src="script/library/jquery.min.js" type="text/javascript"></script>
 	<script src="script/library/knockout-3.3.0.js" type="text/javascript"></script>
 	<script src="script/koversion.js" type="text/javascript"></script>
@@ -16,6 +16,12 @@
 				<form id="form-container" class="form-container" data-bind="submit: newHome">
 					<label for="address">Address: </label>
 					<input type="text" placeholder="Enter the address you want to lookup..." name="address" id="address" size=80 autofocus=true>
+					<label for="dateRange">Data Range: </label>
+					<select name="dateRange" id="dateRange" size=1>
+						<option value="7" selected>1 Week</option>
+						<option value="30">30 Days</option>
+						<option value="365">1 Year</option>
+					</select>
 					<button type="button" name="submit">Search</button>
 				</form>
 		</div>

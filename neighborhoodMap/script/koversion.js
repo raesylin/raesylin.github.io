@@ -22,6 +22,26 @@ var myLatLng = function(location) {
 	this.lng = location.lng();
 };
 
+var getDateRange = function(range) {
+	range = Number.parseInt(range);
+
+	var today_in_sec = new Date(Date.now());
+	var endday_in_sec = new Date(today_in_sec - range * 24 * 3600);
+
+	var dateRange = {
+		startDate: (today_in_sec.getMonth()+1).toString() + '/' + (today_in_sec.getDate()-range).toString() + '/' + today_in_sec.getFullYear().toString(),
+		endDate: (endday_in_sec.getMonth()+1).toString() + '/' + endday_in_sec.getDate().toString() + '/' + endday_in_sec.getFullYear().toString()
+	};
+	return dateRange;
+};
+
+var processCrimeLoc = function(data) {
+	var crimeData = [];
+	for (var i = 0; i < data.length; i++) {
+		crimeData.push(new google.maps.LatLng(data[i].lat, data[i].long));
+	};
+	return crimeData;
+};
 
 var mapViewModel = function() {
 	var self = this;
@@ -41,10 +61,15 @@ var mapViewModel = function() {
 
 		var geocoder = new google.maps.Geocoder();
 		var $address = $(form).children('#address').val();
+		var $range = $(form).children('#dateRange').val();
+
+		var dateRange = getDateRange($range);
+		this.startDate = dateRange.startDate;
+		this.endDate = dateRange.endDate;
+
 		geocoder.geocode({'address': $address}, function(results, status) {
 			if (status == google.maps.GeocoderStatus.OK) {
 				self.coordinate = new myLatLng(results[0].geometry.location);
-				console.log(self.coordinate);
 				self.map.setCenter(results[0].geometry.location);
 				self.map.setOptions({zoom: 15});
 				self.homeMarker = new google.maps.Marker({
@@ -63,18 +88,19 @@ var mapViewModel = function() {
 	// 
 	// Crime map
 	// 
-	var testLoc = {
-		lat: 32.857738,
-		lng: -117.2115
-	};
 
 	this.callCrime = function(latlng) {
 		$.ajax({
-			url: 'https://jgentes-Crime-Data-v1.p.mashape.com/crime?enddate=7%2F27%2F2015&lat='+latlng.lat+'&long='+latlng.lng+'&startdate=7%2F21%2F2015',
+			url: 'https://jgentes-Crime-Data-v1.p.mashape.com/crime?enddate='+this.endDate+'&lat='+latlng.lat+'&long='+latlng.lng+'&startdate='+this.startDate,
 			type: 'GET',
 			dataType: 'json',
-			success: function(data) { 
-				console.log(data.length); 
+			success: function(data) {
+				var crimeData = processCrimeLoc(data);
+				var pointArray = new google.maps.MVCArray(crimeData);
+				self.heatmap = new google.maps.visualization.HeatmapLayer({
+    				data: pointArray
+				});
+				self.heatmap.setMap(self.map);
 			},
 			error: function(err) { alert(err) ;},
 			beforeSend: function(xhr) {
@@ -83,8 +109,6 @@ var mapViewModel = function() {
 		});
 
 	};
-
-	// this.callCrime(self.coordinate);
 
 };
 
