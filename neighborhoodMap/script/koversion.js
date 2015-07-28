@@ -23,8 +23,6 @@ var myLatLng = function(location) {
 };
 
 var getDateRange = function(range) {
-	range = Number.parseInt(range);
-
 	var today_in_sec = new Date(Date.now());
 	var endday_in_sec = new Date(today_in_sec - range * 24 * 3600);
 
