@@ -25,14 +25,13 @@
 			<div data-bind="visible: togglePane" id="listView">
 				<form id="CrimeMapRange">
 					<label for="dateRange">Crime records range: </label>
-	<!-- 				<select data-bind="value: dateDelta, event: { change: setCrimeMap($root.coordinate) }" name="dateRange" id="dateRange" size=1> -->
 					<select data-bind="value: dateDelta" id="dateRange" size=1>
 						<option value="7" selected>1 Week</option>
 						<option value="30">30 Days</option>
 						<option value="365">1 Year</option>
 					</select>
 				</form>
-				<button data-bind="visible: crimeMapButton, click: toggleCrimeMap">Toggle Crime Map</button>
+				<button data-bind="visible: crimeMapButton, click: toggleCrimeMap" id="crimeButton">Toggle Crime Map</button>
 				<div data-bind="visible: showInfo" id="info">
 					<p>Crime records not available.</p>
 				</div>

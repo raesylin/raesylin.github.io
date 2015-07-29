@@ -1,20 +1,23 @@
-var initialSetting = {
-	latlng: new google.maps.LatLng(32.857738, -117.21151),
-	zoom: 8
-};
+// var myLat;
+// var myLng;
 
-var setOpt = function(zoom, latlng) {
-	var mapOptions = {		
-		zoom: zoom,
+// navigator.geolocation.getCurrentPosition(function(position) {
+// 	myLat = position.coords.latitude;
+// 	myLng = position.coords.longitude;
+// 	console.log('success');
+// });
+
+var latlng = new google.maps.LatLng(32.85738, -117.21151);
+
+var mapOptions = {
+		zoom: 8,
 		center : latlng,
 		panControl: false,
 		zoomControl: true,
-		mapTypeControl: true,
+		mapTypeControl: false,
 		scaleControl: true,
 		streetViewControl: true,
 		overviewMapControl: false,
-	};
-	return mapOptions;
 };
 
 var stylesArray = [
@@ -39,11 +42,6 @@ var stylesArray = [
 	}
 ];
 
-var myLatLng = function(location) {
-	this.lat = location.lat();
-	this.lng = location.lng();
-};
-
 var getDateRange = function(range) {
 
 	var todayInSec = Date.now();
@@ -65,6 +63,8 @@ var processCrimeLoc = function(data) {
 	return crimeData;
 };
 
+
+
 var mapViewModel = function() {
 	var self = this;
 
@@ -80,17 +80,17 @@ var mapViewModel = function() {
 	self.crimeMapButton = ko.observable(false);
 	self.coordinate = ko.observable();
 
-	var initializeMap = function(setting) {
-		var mapOptions = new setOpt(setting.zoom, setting.latlng);
+	var initializeMap = function() {
 		self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-		self.coordinate(setting.latlng);
+		self.coordinate(latlng);
 		self.heatmap = new google.maps.visualization.HeatmapLayer();
 	};
 
 	// Operations:
 	// -- Initialize map
 
-	initializeMap(initialSetting);
+	// initializeMap(initialSetting);
+	initializeMap();
 
 	// -- Center map to new address
 
@@ -164,15 +164,10 @@ var mapViewModel = function() {
 		});
 	};
 
-
-
 	// Get new center after moving map and request new crime data
 	google.maps.event.addListener(self.map, 'dragend', function() {
 		self.coordinate(self.map.getCenter());
 		self.setCrimeMap();
-		// window.setTimeout(function() {
-
-		// }, 500);
 	});
 
 };
