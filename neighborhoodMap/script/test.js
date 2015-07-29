@@ -1,15 +1,32 @@
-var initialSetting = {
-	latlng: new google.maps.LatLng(32.857738, -117.21151),
-	zoom: 8
-};
+// var myLat;
+// var myLng;
 
-var setOpt = function(zoom, latlng) {
-	var mapOptions = {		
-		zoom: zoom,
+// navigator.geolocation.getCurrentPosition(function(position) {
+// 	myLat = position.coords.latitude;
+// 	myLng = position.coords.longitude;
+// 	console.log('success');
+// });
+
+// var latlng = new google.maps.LatLng(32.85738, -117.21151);
+
+// var mapOptions = {
+// 		zoom: 8,
+// 		center : latlng,
+// 		panControl: false,
+// 		zoomControl: true,
+// 		mapTypeControl: false,
+// 		scaleControl: true,
+// 		streetViewControl: true,
+// 		overviewMapControl: false,
+// };
+
+var setOptions = function(latlng) {
+	var mapOptions = {
+		zoom: 8,
 		center : latlng,
 		panControl: false,
 		zoomControl: true,
-		mapTypeControl: true,
+		mapTypeControl: false,
 		scaleControl: true,
 		streetViewControl: true,
 		overviewMapControl: false,
@@ -17,10 +34,28 @@ var setOpt = function(zoom, latlng) {
 	return mapOptions;
 };
 
-var myLatLng = function(location) {
-	this.lat = location.lat();
-	this.lng = location.lng();
-};
+
+var stylesArray = [
+	{
+		featureType: 'all',
+		stylers: [
+			{saturation: -80}
+		]
+	},{
+		featureType: 'road.arterial',
+		elementType: 'geometry',
+		stylers: [
+			{hue: "#00ffee"},
+			{saturation: 50}
+		]
+	},{
+		featureType: 'poi.business',
+		elementType: 'labels',
+		stylers: [
+			{visibility: "off"}
+		]
+	}
+];
 
 var getDateRange = function(range) {
 
@@ -43,47 +78,93 @@ var processCrimeLoc = function(data) {
 	return crimeData;
 };
 
+
+
 var mapViewModel = function() {
 	var self = this;
 
-	var $info = $('#info');
-	
+	self.showInfo = ko.observable(false);
+	self.togglePane = ko.observable(false);
+
 	self.address = ko.observable();
 	self.dateDelta = ko.observable('7');
+	self.dateDelta.subscribe(function() {
+		self.setCrimeMap();
+	});
 
-	var initializeMap = function(setting) {
-		var mapOptions = new setOpt(setting.zoom, setting.latlng);
-		self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-		self.coordinate = setting.latlng;
+	self.crimeMapButton = ko.observable(false);
+	self.coordinate = ko.observable();
+
+	var initializeMap = function() {
+
+		var locSuccss = function(position) {
+			var localLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+			setMap(localLatLng);
+			console.log('success, ', localLatLng)
+		};
+
+		var locError = function(error) {
+			var localLatLng = new google.maps.LatLng(37.7833, -122.4167);
+			setMap(localLatLng);
+			console.log('error, ', error, localLatLng)
+		};
+
+		var setMap = function(localLatLng) {
+			console.log('call map: ', localLatLng);
+			var myMapOptions = new setOptions(localLatLng);
+			self.map = new google.maps.Map(document.getElementById('map-canvas'), myMapOptions);
+			self.coordinate(localLatLng);
+			self.heatmap = new google.maps.visualization.HeatmapLayer();
+		};
+
+		navigator.geolocation.getCurrentPosition(locSuccss, locError);
 	};
 
-	// Operations:
 
+
+		// navigator.geolocation.getCurrentPosition(function(position) {
+		// 	var myLat = position.coords.latitude;
+		// 	var myLng = position.coords.longitude;
+		// 	var latlng = new google.maps.LatLng(myLat, myLng);
+		// 	self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		// 	self.coordinate(latlng);
+		// 	self.heatmap = new google.maps.visualization.HeatmapLayer();
+		// });
+		// self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		// self.coordinate(latlng);
+		// self.heatmap = new google.maps.visualization.HeatmapLayer();
+	// };
+
+	// Operations:
 	// -- Initialize map
-	initializeMap(initialSetting);
+
+	// initializeMap(initialSetting);
+	initializeMap();
 
 	// -- Center map to new address
+
 	this.newHome = function() {
-		console.log(self.heatmap);
+		self.showInfo(false);
+		self.crimeMapButton(false);
+		self.heatmap.setMap(null);
+
 		var geocoder = new google.maps.Geocoder();
-		// var $address = $(form).children('#address').val();
 
 		geocoder.geocode({'address': self.address()}, function(results, status) {
 			if (status == google.maps.GeocoderStatus.OK) {
-				self.coordinate = results[0].geometry.location;
-				self.map.setCenter(self.coordinate);
+				self.coordinate(results[0].geometry.location);
+				self.map.setCenter(self.coordinate());
 				self.map.setOptions({zoom: 14});
 				self.homeMarker = new google.maps.Marker({
 					map: self.map,
-					position: self.coordinate,
+					position: self.coordinate(),
 					title: "Your new home",
 				});
 				if (self.heatmap) {
-					console.log('resetting heatmap...');
-					console.log(self.heatmap);
 					self.heatmap.setMap(null);
 				};
-				// self.testCrimeMap(self.coordinate);
+				self.togglePane(true);
+				self.setCrimeMap();
 			} else {
 				alert('Geocode was not successful for the following reason: ' + status);
 			};
@@ -91,18 +172,20 @@ var mapViewModel = function() {
 
 	};
 
-	// 
-	// Crime map
-	// 
+	this.toggleCrimeMap = function() {
+		self.heatmap.setMap(self.heatmap.getMap() ? null : self.map);
+		self.map.setOptions(self.heatmap.getMap() ? {styles: stylesArray} : {styles: []});
+	};
 
-	this.testCrimeMap = function(coordinate) {
+	this.setCrimeMap = function() {
+		// self.togglePane(true);
 		var range_int = parseInt(self.dateDelta());
 		var dateRange = getDateRange(range_int);
 		this.startDate = dateRange.startDate;
 		this.endDate = dateRange.endDate;
 		
 		$.ajax({
-			url: 'https://jgentes-Crime-Data-v1.p.mashape.com/crime?enddate='+this.endDate+'&lat='+coordinate.lat()+'&long='+coordinate.lng()+'&startdate='+this.startDate,
+			url: 'https://jgentes-Crime-Data-v1.p.mashape.com/crime?enddate='+this.endDate+'&lat='+self.coordinate().lat()+'&long='+self.coordinate().lng()+'&startdate='+this.startDate,
 			type: 'GET',
 			dataType: 'json',
 			success: function(data) {
@@ -117,9 +200,10 @@ var mapViewModel = function() {
 	    					data: pointArray
 						});
 					} ;
+					self.crimeMapButton(true);
 					// self.heatmap.setMap(self.map);
 				} else {
-					$info.css('display', 'block');
+					self.showInfo(true);
 				};
 			},
 			error: function(err) { alert(err) ;},
@@ -127,46 +211,13 @@ var mapViewModel = function() {
 				xhr.setRequestHeader("X-Mashape-Authorization", "KqEmEEqnUomsh36Fd17Aei0l9fGqp1BTzhCjsnMPd4iZC218H6");
 			}
 		});
-	};
-
-	this.showCrimeMap = function(coordinate) {
-		$.ajax({
-			url: 'https://jgentes-Crime-Data-v1.p.mashape.com/crime?enddate='+this.endDate+'&lat='+coordinate.lat()+'&long='+coordinate.lng()+'&startdate='+this.startDate,
-			type: 'GET',
-			dataType: 'json',
-			success: function(data) {
-				if (data.length != 0) {
-					var crimeData = processCrimeLoc(data);
-					var pointArray = new google.maps.MVCArray(crimeData);
-					self.heatmap = new google.maps.visualization.HeatmapLayer({
-	    				data: pointArray
-					});
-					// self.heatmap.setMap(self.map);
-				} else {
-					$info.css('display', 'block');
-				};
-			},
-			error: function(err) { alert(err) ;},
-			beforeSend: function(xhr) {
-				xhr.setRequestHeader("X-Mashape-Authorization", "KqEmEEqnUomsh36Fd17Aei0l9fGqp1BTzhCjsnMPd4iZC218H6");
-			}
-		});
-	};
-
-	this.toggleCrimeMap = function() {
-		if (self.heatmap) {
-			self.heatmap.setMap(self.heatmap.getMap() ? null : self.map)
-		} else {
-			self.testCrimeMap(self.coordinate);
-		};
-
 	};
 
 	// Get new center after moving map and request new crime data
-	// google.maps.event.addListener(self.map, 'center_changed', function() {
-
-	// 	// self.showCrimeMap(self.map.getCenter);
-	// });
+	google.maps.event.addListener(self.map, 'dragend', function() {
+		self.coordinate(self.map.getCenter());
+		self.setCrimeMap();
+	});
 
 };
 

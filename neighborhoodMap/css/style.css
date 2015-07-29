@@ -11,6 +11,24 @@ body {
 	line-height: 1.4em;
 }
 
+.hint {
+	text-align: left;
+	padding: 10px 10px 15px 20px;
+}
+
+.hint h1 {
+	color: #FFFFFF;
+	font-size: 1.5em;
+	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+}
+
+.hint h1 a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
 .nav {
 	display: block;
 	width: 100%;
@@ -18,6 +36,9 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	text-align: center;
+	background-color: #4C4C4C;
+	min-height: 120px;
+	max-height: 130px;
 }
 
 #map-canvas {
@@ -40,6 +61,7 @@ body {
 	width: 80%;
 	margin-right: 0;
 	margin-left: 0;
+	padding-left: 10px;
 }
 
 #info {
@@ -63,9 +85,10 @@ body {
 
 #setMapForm {
 	display: flex;
-	padding: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
 	vertical-align: middle;
-	text-align: center;
+	/*text-align: left;*/
 }
 
 /*input[type="text"] {
@@ -78,4 +101,21 @@ body {
 	border-radius: 0px;
 	padding: 5px 10px 5px 10px;
 	text-decoration: none;
+}
+
+#inputAddress {
+	padding: 5px;
+	-webkit-border-radius: 0; 
+	-moz-border-radius: 0;
+	border-radius: 0;
+	height: 26px;
+	font-size: 0.9em;
+	font-weight: lighter;
+}
+
+#searchButton {
+	cursor: pointer;
+	border-radius: 0;
+	min-width: 20px;
+	border-width: 0;
 }

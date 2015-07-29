@@ -7,37 +7,48 @@
 // 	console.log('success');
 // });
 
-var latlng = new google.maps.LatLng(32.85738, -117.21151);
+// var latlng = new google.maps.LatLng(32.85738, -117.21151);
 
-var mapOptions = {
-		zoom: 8,
+var setOptions = function(zoom, latlng) {
+	var mapOptions = {
+		zoom: zoom,
 		center : latlng,
 		panControl: false,
 		zoomControl: true,
-		mapTypeControl: false,
+		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.SMALL,
+			position: google.maps.ControlPosition.RIGHT_BOTTOM
+		},
+		mapTypeControl: true,
 		scaleControl: true,
 		streetViewControl: true,
+		streetViewControlOptions: {
+			position: google.maps.ControlPosition.RIGHT_BOTTOM
+		},
 		overviewMapControl: false,
+	};
+	return mapOptions;
 };
 
 var stylesArray = [
 	{
 		featureType: 'all',
 		stylers: [
-			{saturation: -80}
+			{saturation: -50},
+			{hue: "#20FFFF"},
 		]
 	},{
-		featureType: 'road.arterial',
+		featureType: 'road',
 		elementType: 'geometry',
 		stylers: [
-			{hue: "#00ffee"},
-			{saturation: 50}
+			{lightness: 100},
+			{visibility: "simplified"}
 		]
 	},{
 		featureType: 'poi.business',
 		elementType: 'labels',
 		stylers: [
-			{visibility: "off"}
+			{visibility: "simplified"}
 		]
 	}
 ];
@@ -64,7 +75,6 @@ var processCrimeLoc = function(data) {
 };
 
 
-
 var mapViewModel = function() {
 	var self = this;
 
@@ -81,18 +91,35 @@ var mapViewModel = function() {
 	self.coordinate = ko.observable();
 
 	var initializeMap = function() {
-		self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-		self.coordinate(latlng);
-		self.heatmap = new google.maps.visualization.HeatmapLayer();
+
+		var locSuccss = function(position) {
+			var localLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+			setMap(8, localLatLng);
+			console.log('success, ', localLatLng)
+		};
+
+		var locError = function(error) {
+			var localLatLng = new google.maps.LatLng(39.8282, -98.5795);
+			setMap(5, localLatLng);
+			console.log('error, ', error, localLatLng)
+		};
+
+		var setMap = function(zoom, localLatLng) {
+			var myMapOptions = new setOptions(zoom, localLatLng);
+			self.map = new google.maps.Map(document.getElementById('map-canvas'), myMapOptions);
+			self.map.setOptions({styles: stylesArray});			
+			self.coordinate(localLatLng);
+			self.heatmap = new google.maps.visualization.HeatmapLayer();
+
+			google.maps.event.addListener(self.map, 'dragend', function() {
+				self.coordinate(self.map.getCenter());
+				self.setCrimeMap();
+			});
+		};
+
+		navigator.geolocation.getCurrentPosition(locSuccss, locError);
+
 	};
-
-	// Operations:
-	// -- Initialize map
-
-	// initializeMap(initialSetting);
-	initializeMap();
-
-	// -- Center map to new address
 
 	this.newHome = function() {
 		self.showInfo(false);
@@ -125,11 +152,10 @@ var mapViewModel = function() {
 
 	this.toggleCrimeMap = function() {
 		self.heatmap.setMap(self.heatmap.getMap() ? null : self.map);
-		self.map.setOptions(self.heatmap.getMap() ? {styles: stylesArray} : {styles: []});
+		// self.map.setOptions(self.heatmap.getMap() ? {styles: stylesArray} : {styles: []});
 	};
 
 	this.setCrimeMap = function() {
-		// self.togglePane(true);
 		var range_int = parseInt(self.dateDelta());
 		var dateRange = getDateRange(range_int);
 		this.startDate = dateRange.startDate;
@@ -164,11 +190,10 @@ var mapViewModel = function() {
 		});
 	};
 
+	initializeMap();
+
 	// Get new center after moving map and request new crime data
-	google.maps.event.addListener(self.map, 'dragend', function() {
-		self.coordinate(self.map.getCenter());
-		self.setCrimeMap();
-	});
+
 
 };
 
