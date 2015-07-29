@@ -8,27 +8,37 @@
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization"></script>
 	<script src="script/library/jquery.min.js" type="text/javascript"></script>
 	<script src="script/library/knockout-3.3.0.js" type="text/javascript"></script>
-	<script src="script/koversion.js" type="text/javascript"></script>
+	<script src="script/app.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="nav">
-				<form id="form-container" class="form-container" data-bind="submit: newHome">
+			<div class="form-container">
+				<form id="setMapForm" class="setMapForm" data-bind="submit: newHome">
 					<label for="address">Address: </label>
-					<input type="text" placeholder="Enter the address you want to lookup..." name="address" id="address" size=80 autofocus=true>
-					<label for="dateRange">Data Range: </label>
-					<select name="dateRange" id="dateRange" size=1>
+					<input type="text" placeholder="Enter the address you want to lookup..." name="address" id="address" size=80 autofocus=true data-bind="value: address">
+					<button type="submit" name="submit">Search</button>
+				</form>
+			</div>
+		</div>
+		<div class="main">
+			<div data-bind="visible: togglePane" id="listView">
+				<form id="CrimeMapRange">
+					<label for="dateRange">Crime records range: </label>
+	<!-- 				<select data-bind="value: dateDelta, event: { change: setCrimeMap($root.coordinate) }" name="dateRange" id="dateRange" size=1> -->
+					<select data-bind="value: dateDelta" id="dateRange" size=1>
 						<option value="7" selected>1 Week</option>
 						<option value="30">30 Days</option>
 						<option value="365">1 Year</option>
 					</select>
-					<button type="button" name="submit">Search</button>
 				</form>
-		</div>
-		<div class="main">
-			<div id="listView">
+				<button data-bind="visible: crimeMapButton, click: toggleCrimeMap">Toggle Crime Map</button>
+				<div data-bind="visible: showInfo" id="info">
+					<p>Crime records not available.</p>
+				</div>
 			</div>
 			<div id="map-canvas">
+
 			</div>
 		</div>
 	</div>
