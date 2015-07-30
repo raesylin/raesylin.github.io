@@ -146,7 +146,9 @@ var mapViewModel = function() {
 	};
 
 	this.toggleNav = function() {
-		self.nav(!self.nav());
+		if (window.screen.width < 500) {
+			self.nav(!self.nav());
+		};
 	};
 
 	this.toggleCrimeMap = function() {
