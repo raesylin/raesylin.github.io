@@ -136,6 +136,17 @@ body {
 		max-width: 280px;
 	}
 
+	#mobile-searchbtn {
+		width: 40px;
+		height: 40px;
+		padding: 6px;
+		background-color: #008080;
+	}
+
+	#searchButton {
+		display: none;
+	}
+
 	#infoPane {
 		display: none;
 	}
@@ -215,6 +226,10 @@ body {
 		border-radius: 0px;
 		padding: 5px 10px 5px 10px;
 		text-decoration: none;
+	}
+
+	#mobile-searchbtn {
+		display: none;
 	}
 
 }
