@@ -1,14 +1,3 @@
-// var myLat;
-// var myLng;
-
-// navigator.geolocation.getCurrentPosition(function(position) {
-// 	myLat = position.coords.latitude;
-// 	myLng = position.coords.longitude;
-// 	console.log('success');
-// });
-
-// var latlng = new google.maps.LatLng(32.85738, -117.21151);
-
 var setOptions = function(zoom, latlng) {
 	var mapOptions = {
 		zoom: zoom,
@@ -20,9 +9,13 @@ var setOptions = function(zoom, latlng) {
 			position: google.maps.ControlPosition.RIGHT_BOTTOM
 		},
 		mapTypeControl: true,
+		maptypeControlOptions: {
+			position: google.maps.ControlPosition.LEFT_BOTTOM
+		},
 		scaleControl: true,
 		streetViewControl: true,
 		streetViewControlOptions: {
+			style: google.maps.MapTypeControlStyle.DEFAULT,
 			position: google.maps.ControlPosition.RIGHT_BOTTOM
 		},
 		overviewMapControl: false,
@@ -89,19 +82,20 @@ var mapViewModel = function() {
 
 	self.crimeMapButton = ko.observable(false);
 	self.coordinate = ko.observable();
+	self.nav = ko.observable(true);
 
 	var initializeMap = function() {
 
 		var locSuccss = function(position) {
 			var localLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 			setMap(8, localLatLng);
-			console.log('success, ', localLatLng)
+			console.log('Positioning successfully, current coordinate: ', localLatLng);
 		};
 
 		var locError = function(error) {
 			var localLatLng = new google.maps.LatLng(39.8282, -98.5795);
 			setMap(5, localLatLng);
-			console.log('error, ', error, localLatLng)
+			console.log('Error getting position: ', error, ', using default location');
 		};
 
 		var setMap = function(zoom, localLatLng) {
@@ -143,11 +137,16 @@ var mapViewModel = function() {
 				};
 				self.togglePane(true);
 				self.setCrimeMap();
+				self.toggleNav();
 			} else {
 				alert('Geocode was not successful for the following reason: ' + status);
 			};
 		});
 
+	};
+
+	this.toggleNav = function() {
+		self.nav(!self.nav());
 	};
 
 	this.toggleCrimeMap = function() {

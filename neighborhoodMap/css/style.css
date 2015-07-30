@@ -11,76 +11,25 @@ body {
 	line-height: 1.4em;
 }
 
-.hint {
-	text-align: left;
-	padding: 10px 10px 15px 20px;
-}
-
-.hint h1 {
-	color: #FFFFFF;
-	font-size: 1.5em;
-	font-weight: 100;
-	font-family: 'Roboto', sans-serif;
-}
-
-.hint h1 a {
-	color: inherit;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.nav {
-	display: block;
-	width: 100%;
-	height: 15%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	text-align: center;
-	background-color: #4C4C4C;
-	min-height: 120px;
-	max-height: 130px;
-}
-
 #map-canvas {
 	height: 100%;
 	width: 100%;
 }
 
 .container {
-	width: 100%;
-	height: 100%;
+		width: 100%;
+		height: 100%;
+	}
+
+.heading {
+	text-align: left;
+	padding: 10px 10px 15px 20px;
 }
 
-.main {
-	width: 100%;
-	height: 85%;
-	position: relative;
-}
-
-.form-container {	
-	width: 80%;
-	margin-right: 0;
-	margin-left: 0;
-	padding-left: 10px;
-}
-
-#info {
-	padding: 15px;
-	text-align: center;
-	color: #7F007F;
-	font-size: 0.9em;
-}
-
-#listView {
-	max-width: 20%;
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	z-index: 99;
-	opacity: 0.9;
-	background-color: #FFFFFF;
-	padding: 15px;
-	font-size: 0.9em;
+.heading h1 a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 #setMapForm {
@@ -88,19 +37,7 @@ body {
 	padding-left: 20px;
 	padding-bottom: 10px;
 	vertical-align: middle;
-	/*text-align: left;*/
-}
-
-/*input[type="text"] {
-	line-height: 28px;
-}*/
-
-#crimeButton {
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0px;
-	padding: 5px 10px 5px 10px;
-	text-decoration: none;
+	text-align: left;
 }
 
 #inputAddress {
@@ -113,9 +50,190 @@ body {
 	font-weight: lighter;
 }
 
-#searchButton {
-	cursor: pointer;
-	border-radius: 0;
-	min-width: 20px;
-	border-width: 0;
+#crimeButton {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0px;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+}
+
+/* Mobile device */
+@media screen and (max-width: 349px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.main {
+		width: 100%;
+		height: 100%;
+	}
+
+	.nav {
+		width: 100%;
+		height: 130px;
+		position: absolute;
+		top: 60px;
+		z-index: 98;
+	}
+
+	.mini-nav {
+		display: block;
+		background-color: #191919;
+		width: 100%;
+		height: 50px;
+		padding: 17px;
+		vertical-align: middle;
+		max-height: 10%;
+	}
+
+	.nav-item {
+		margin-left: 9px;
+		margin-right: 9px;
+	}
+
+	.nav-item span {
+		font-family: 'Roboto', sans-serif;
+		font-size: 0.9em;
+	}
+
+	.nav-item span a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.form-container {
+		max-width: 95%;
+		height: 100%;
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		opacity: 0.9;
+		background-color: #191919;
+		padding: 15px;
+	}
+
+	.heading {
+		padding-left: 10px;
+	}
+
+	#setMapForm {
+		padding-left: 10px;
+	}
+
+	.heading h1 {
+		color: #FFFFFF;
+		font-size: 1.2em;
+		font-weight: 100;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	input[type="text"] {
+		width: 80%;
+		min-width: 150px;
+		max-width: 280px;
+	}
+
+	#infoPane {
+		display: none;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 99;
+		opacity: 0.9;
+		background-color: #191919;
+		padding: 15px;
+		font-size: 0.9em;
+	}
+
+	#crimeButton {
+		width: 30px;
+		height: 30px;
+		font-size: 0.6em;
+	}
+
+	#CrimeMapRange {
+		color: #FFFFFF;
+	}
+
+}
+
+/* Desktop or large screen mobile device */
+@media screen and (min-width: 500px) {
+	.mini-nav {
+		display: none;
+	}
+
+	.heading h1 {
+		color: #FFFFFF;
+		font-size: 1.5em;
+		font-weight: 100;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.nav {
+		display: block;
+		width: 100%;
+		height: 130px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		background-color: #4C4C4C;
+	}
+
+	.main {
+		width: 100%;
+		height: calc(100% - 130px);
+		min-height: 80%;
+		position: relative;
+	}
+	
+	.form-container {	
+		width: 80%;
+		padding-left: 10px;
+	}
+
+	input[type="text"] {
+		width: 80%;
+		min-width: 300px;
+		max-width: 800px;
+	}
+
+	#searchButton {
+		cursor: pointer;
+		border-radius: 0;
+		min-width: 20px;
+		border-width: 0;
+	}
+
+	#info {
+		padding: 15px;
+		text-align: center;
+		color: #7F007F;
+		font-size: 0.9em;
+	}
+
+	#infoPane {
+		max-width: 20%;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 99;
+		opacity: 0.9;
+		background-color: #CCCCCC;
+		padding: 15px;
+		font-size: 0.9em;
+	}
+
+	#crimeButton {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0px;
+		padding: 5px 10px 5px 10px;
+		text-decoration: none;
+	}
+
 }
