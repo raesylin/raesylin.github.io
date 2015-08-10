@@ -1,3 +1,30 @@
+
+
+var getDateRange = function(range) {
+
+	var todayInSec = Date.now();
+	var end = new Date(todayInSec);
+	var start = new Date(todayInSec - range * 24 * 3600 * 1000);
+
+	var dateRange = {
+		startDate: (start.getMonth()+1).toString() + '/' + start.getDate().toString() + '/' + start.getFullYear().toString(),
+		endDate: (end.getMonth()+1).toString() + '/' + end.getDate().toString() + '/' + end.getFullYear().toString()
+	};
+	return dateRange;
+};
+
+var setDateRange = function(dateMark) {
+	var todayInSec = Date.now();
+	var today = new Date(todayInSec);
+	var oneYearAGo = (today.getMonth()+1).toString() + '/' + today.getDate().toString() + '/' + (today.getFullYear()-1).toString();
+	var dateRange = {
+		startDate: oneYearAGo,
+		endDate: (today.getMonth()+1).toString() + '/' + today.getDate().toString() + '/' + today.getFullYear().toString()
+	};
+	return dateRange;
+};
+
+
 var setOptions = function(zoom, latlng) {
 	var mapOptions = {
 		zoom: zoom,
@@ -46,25 +73,39 @@ var stylesArray = [
 	}
 ];
 
-var getDateRange = function(range) {
-
-	var todayInSec = Date.now();
-	var end = new Date(todayInSec);
-	var start = new Date(todayInSec - range * 24 * 3600 * 1000);
-
-	var dateRange = {
-		startDate: (start.getMonth()+1).toString() + '/' + start.getDate().toString() + '/' + start.getFullYear().toString(),
-		endDate: (end.getMonth()+1).toString() + '/' + end.getDate().toString() + '/' + end.getFullYear().toString()
-	};
-	return dateRange;
-};
-
 var processCrimeLoc = function(data) {
 	var crimeData = [];
 	for (var i = 0; i < data.length; i++) {
 		crimeData.push(new google.maps.LatLng(data[i].lat, data[i].long));
 	};
 	return crimeData;
+};
+
+var processCrimeDate = function(data) {
+
+	var bins = 6;
+	// var bins = mapViewModel.bins;
+	// console.log('bins = ', bins);
+	var crimeDataSets = [] ; 
+
+	for (var i = 0; i < bins; i++) {
+		crimeDataSets[i] = [];
+	};
+
+	var todayInmSec = Date.now();
+
+	var yearInmSec = 365 * 24 * 3600 * 1000;
+	var OneYearAgo = Date.now() - yearInmSec;
+	var dateInterval = Math.floor(yearInmSec/bins);
+	
+	for (var i = 0; i < data.length; i++) {
+		var itemDate = new Date(data[i].datetime);
+		var index = Math.floor((itemDate.valueOf() - OneYearAgo)/dateInterval);
+		if (index >= bins) index = bins - 1;
+		crimeDataSets[index].push(new google.maps.LatLng(data[i].lat, data[i].long));
+	};
+
+	return crimeDataSets;
 };
 
 
@@ -75,7 +116,7 @@ var mapViewModel = function() {
 	self.togglePane = ko.observable(false);
 
 	self.address = ko.observable();
-	self.dateDelta = ko.observable('7');
+	self.dateDelta = ko.observable('365');
 	self.dateDelta.subscribe(function() {
 		self.setCrimeMap();
 	});
@@ -84,11 +125,20 @@ var mapViewModel = function() {
 	self.coordinate = ko.observable();
 	self.nav = ko.observable(true);
 
+	self.dateMark = ko.observable(0);
+	self.bins = 6;
+
+	self.pointArray = [];
+	// for (var i = 0; i < self.bins; i++) {
+	// 	self.pointArray[i] = [];
+	// };
+	// console.log(self.pointArray);
+
 	var initializeMap = function() {
 
 		var locSuccss = function(position) {
 			var localLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			setMap(8, localLatLng);
+			setMap(13, localLatLng);
 			console.log('Positioning successfully, current coordinate: ', localLatLng);
 		};
 
@@ -101,7 +151,12 @@ var mapViewModel = function() {
 		var setMap = function(zoom, localLatLng) {
 			var myMapOptions = new setOptions(zoom, localLatLng);
 			self.map = new google.maps.Map(document.getElementById('map-canvas'), myMapOptions);
-			self.map.setOptions({styles: stylesArray});			
+			self.map.setOptions({styles: stylesArray});
+			self.locMarker = new google.maps.Marker({
+				map: self.map,
+				position: localLatLng,
+				title: "Your current position",
+			});
 			self.coordinate(localLatLng);
 			self.heatmap = new google.maps.visualization.HeatmapLayer();
 
@@ -132,6 +187,7 @@ var mapViewModel = function() {
 					position: self.coordinate(),
 					title: "Your new home",
 				});
+
 				if (self.heatmap) {
 					self.heatmap.setMap(null);
 				};
@@ -169,15 +225,23 @@ var mapViewModel = function() {
 			success: function(data) {
 				console.log(data.length);
 				if (data.length != 0) {
-					var crimeData = processCrimeLoc(data);
-					var pointArray = new google.maps.MVCArray(crimeData);
+					// var crimeData0 = processCrimeLoc(data);
+					var crimeData = processCrimeDate(data);
+					for (var i = 0; i < crimeData.length; i++) {
+							self.pointArray[i] = new google.maps.MVCArray(crimeData[i]);
+					};
+					// var pointArray0 = new google.maps.MVCArray(crimeData0);
+					// TODO
 					if (self.heatmap) {
-						self.heatmap.setData(pointArray);
+						console.log('Updating existing heatmap data...');
+						self.heatmap.setData(self.pointArray[5]);
+						// self.heatmap.setData(pointArray0);
 					} else {
+						console.log('Initializing new crime map...');
 						self.heatmap = new google.maps.visualization.HeatmapLayer({
-	    					data: pointArray
+	    					data: self.pointArray[5],
 						});
-					} ;
+					};
 					self.crimeMapButton(true);
 					// self.heatmap.setMap(self.map);
 				} else {
@@ -195,7 +259,37 @@ var mapViewModel = function() {
 
 	// Get new center after moving map and request new crime data
 
+};
 
+ko.bindingHandlers.slider = {
+	init: function(element, valueAccessor, allBindings, viewModel) {
+		var options = allBindings().sliderOptions || {};
+		$(element).slider(options);
+		ko.utils.registerEventHandler(element, "slidechange", function(event, ui) {
+			var observable = valueAccessor();
+			observable(ui.value);
+		});
+		ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
+			$(element).slider("destroy");
+		});
+		ko.utils.registerEventHandler(element, "slide", function(event, ui) {
+			var observable = valueAccessor();
+			observable(ui.value);
+			console.log(observable());
+			viewModel.heatmap.setData(viewModel.pointArray[observable()]);
+		});
+		ko.utils.registerEventHandler(element, "change", function(event, ui) {
+			var observable = valueAccessor();
+			observable(ui.value);
+		});
+	},
+	update: function(element, valueAccessor) {
+		var value = ko.utils.unwrapObservable(valueAccessor());
+		if (isNaN(value)) { 
+			value = 0;
+		};
+		$(element).slider("value", value);
+	}
 };
 
 $(document).ready(function() {
