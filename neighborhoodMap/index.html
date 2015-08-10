@@ -36,14 +36,14 @@
 		<div class="main">
 			<div data-bind="visible: togglePane" id="infoPane">
 				<div id="slider" data-bind="slider: dateMark, sliderOptions: {min: 0, max: 5, step: 1, value: 0}"></div>
-				<form id="CrimeMapRange">
+<!-- 				<form id="CrimeMapRange">
 					<label for="dateRange">Crime records range: </label>
 					<select data-bind="value: dateDelta" id="dateRange" size=1>
 						<option value="7" selected>1 Week</option>
 						<option value="30">30 Days</option>
 						<option value="365">1 Year</option>
 					</select>
-				</form>
+				</form> -->
 				<button data-bind="visible: crimeMapButton, click: toggleCrimeMap" id="crimeButton">Toggle Crime Map</button>
 				<div data-bind="visible: showInfo" id="info">
 					<p>Crime records not available.</p>
