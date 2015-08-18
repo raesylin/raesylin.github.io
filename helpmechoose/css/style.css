@@ -5,6 +5,11 @@ body {
 	font-weight: lighter;
 }
 
+a, a:hover, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
 .container {
 	width: 100%;
 	height: 100%;
@@ -47,6 +52,16 @@ body {
 .chosen {
 	color: #FFFFFF;
 	background: red;
+}
+
+.numResult {
+	padding-top: 80px;
+	color: #800040;
+	height: 50px;
+	width: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 4em;
 }
 
 /*input[type="text"] {

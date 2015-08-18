@@ -1,5 +1,5 @@
-<div id="listContainer" ng-controller="NewListController as listCtrl">
-	<div class="listPane" id="listHead">
+<div id="newListContainer">
+	<div class="listPane">
 		<h2>Make a new list</h2>
 	</div>
 	<div class="row">
@@ -16,18 +16,6 @@
 			</form>
 		</div>
 	</div>
+	<!-- The list content -->
 	<list-content></list-content>
-<!-- 	<div class="row">
-		<div class="col-lg-6" id="listContent">
-			<ul class="list-group">
-				<li class="list-group-item" ng-repeat="item in listCtrl.list"> <span ng-class="{chosen:item.chosen}">{{item.itemName}}</span> <span class="badge"><a href ng-click="listCtrl.removeItem(item)"><span class="glyphicon glyphicon-remove"></span></a></span></li>
-			</ul>
-		</div>	
-	</div>
-	<div class="row">
-		<div class="col-lg-6">
-			<button type="button" class="btn btn-default" ng-click="listCtrl.makeChoice()">Choose One!</button>
-			<button type="button" class="btn btn-default" ng-click="listCtrl.clearList()">Clear List</button>
-		</div>
-	</div> -->
 </div>

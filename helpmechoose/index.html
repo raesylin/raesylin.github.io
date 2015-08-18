@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="chooseapp">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<title>Help Me Choose!</title>
@@ -10,29 +10,31 @@
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
-<body>
+<body ng-controller="ListController as listCtrl">
 	<div class="container col-12">
 		<div class="cus-header col-12">
-			<h1 id="title">Help Me Choose!</h1>
+			<h1 id="title"><a href="index.html">Help Me Choose!</a></h1>
 		</div>
 		<div class="main col-12" ng-controller="TabController as tab">
 			<ul class="nav nav-tabs nav-justified">
-				<li ng-class="{active:tab.isSelected(1)}"><a href ng-click="tab.selectTab(1)"><span class="func">1</span> Choose from a new list</a></li>
+				<li ng-class="{active:tab.isSelected(1)}"><a href ng-click="tab.selectTab(1); listCtrl.selectList()"><span class="func">1</span> Choose from a new list</a></li>
 				<li ng-class="{active:tab.isSelected(2)}"><a href ng-click="tab.selectTab(2)"><span class="func">2</span> Choose from saved lists</a></li>
 				<li ng-class="{active:tab.isSelected(3)}"><a href ng-click="tab.selectTab(3)"><span class="func">3</span> Give me a number</a></li>
 			</ul>
-			<div class="col-12" ng-show="tab.isSelected(1)">
-				<new-panel></new-panel>
-			</div>
-			<div class="col-12" ng-show="tab.isSelected(2)">
-				<preset-panel></preset-panel>
-			</div>
-			<div class="col-12" ng-show="tab.isSelected(3)">
-				<num-panel></num-panel>
+			<div class="col-12">
+				<div class="col-12" ng-show="tab.isSelected(1)">
+					<new-panel></new-panel>
+				</div>
+				<div class="col-12" ng-show="tab.isSelected(2)">
+					<preset-panel></preset-panel>
+				</div>
+				<div class="col-12" ng-show="tab.isSelected(3)">
+					<num-panel></num-panel>
+				</div>
 			</div>
 		</div>
 	</div>
-	<script src="script/directives/panel.js"></script>
+	<script src="script/directives/num.js"></script>
 	<script src="script/app.js"></script>
 </body>
 </html>

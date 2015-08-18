@@ -40,5 +40,26 @@
 				"chosen": false
 			}
 		]
+	},
+	{
+		"listName": "snack",
+		"listItem": [
+			{
+				"itemName": "milk",
+				"chosen": false
+			},
+			{
+				"itemName": "circle crackers",
+				"chosen": false
+			},
+			{
+				"itemName": "gold fish crackers",
+				"chosen": false
+			},
+			{
+				"itemName": "square ice cream",
+				"chosen": false
+			}
+		]
 	}
 ]

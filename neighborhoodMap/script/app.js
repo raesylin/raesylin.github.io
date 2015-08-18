@@ -276,7 +276,7 @@ ko.bindingHandlers.slider = {
 			var observable = valueAccessor();
 			observable(ui.value);
 			console.log(observable());
-			viewModel.heatmap.setData(viewModel.pointArray[observable()]);
+			viewModel.heatmap.setData(vviewModel.pointArray[observable()]);
 		});
 		ko.utils.registerEventHandler(element, "change", function(event, ui) {
 			var observable = valueAccessor();

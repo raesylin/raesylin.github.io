@@ -1,15 +1,12 @@
-<div id="listContainer">
-	<div class="presetPane" id="presetHead">
+<div id="presetListContainer">
+	<div class="presetPane">
 		<h2> Choose from the presets </h2>
 	</div>
 	<div class="presetPane" id="presetContent">
 		<ul class="btn-group btn-group-justified">
-			<li class="btn btn-default" ng-repeat="list in preset.presets" ng-click="preset.selectList(list)">{{list.listName}}</li>
+			<li class="btn btn-default" ng-repeat="list in listCtrl.presets" ng-click="listCtrl.selectList(list)">{{list.listName}}</li>
 		</ul>
 	</div>
-	<div class="row">
-		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="item in preset.list">{{item.itemName}}</li>
-		</ul>
-	</div>
+	<!-- The list content -->
+	<list-content></list-content>
 </div>

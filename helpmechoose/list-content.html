@@ -1,13 +1,16 @@
 	<div class="row">
 		<div class="col-lg-6" id="listContent">
 			<ul class="list-group">
-				<li class="list-group-item" ng-repeat="item in listCtrl.list"> <span ng-class="{chosen:item.chosen}">{{item.itemName}}</span> <span class="badge"><a href ng-click="listCtrl.removeItem(item)"><span class="glyphicon glyphicon-remove"></span></a></span></li>
+				<li ng-class="{chosen:item.chosen}" class="list-group-item" ng-repeat="item in listCtrl.list"> 
+					{{item.itemName}}
+					<span class="badge"><a href ng-click="listCtrl.removeItem(item)"><span class="glyphicon glyphicon-remove"></span></a></span></li>
 			</ul>
 		</div>	
 	</div>
 	<div class="row">
 		<div class="col-lg-6">
-			<button type="button" class="btn btn-default" ng-click="listCtrl.makeChoice()">Choose One!</button>
-			<button type="button" class="btn btn-default" ng-click="listCtrl.clearList()">Clear List</button>
+			<button type="button" class="btn btn-warning" ng-click="listCtrl.makeChoice()">Choose One!</button>
+			<button type="button" class="btn btn-info" ng-click="listCtrl.reloadList()" ng-show="tab.isSelected(2)">Reload List Content</button>
+			<button type="button" class="btn btn-default" ng-click="listCtrl.clearList()" ng-hide="tab.isSelected(2)">Clear List</button>
 		</div>
 	</div>
