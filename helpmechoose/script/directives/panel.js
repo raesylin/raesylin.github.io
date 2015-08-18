@@ -4,7 +4,7 @@
 	app.directive('presetPanel', function() {
 		return {
 			restrict: 'E',
-			templateUrl: '/preset-panel.html',
+			templateUrl: 'preset-panel.html',
 			controller: 'PresetController',
 			controllerAs: 'preset'
 		};
