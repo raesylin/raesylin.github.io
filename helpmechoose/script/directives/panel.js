@@ -4,7 +4,7 @@
 	app.directive('presetPanel', function() {
 		return {
 			restrict: 'E',
-			templateUrl: 'preset-panel.html',
+			templateUrl: '/helpmechoose/preset-panel.html',
 			controller: 'PresetController',
 			controllerAs: 'preset'
 		};
@@ -16,7 +16,7 @@
 		choice.presets = [];		// prestored lists
 		this.list = [];				// content of current list
 
-		$http.get('/presetStorage.json').success(function(data) {
+		$http.get('/helpmechoose/presetStorage.json').success(function(data) {
 			choice.presets = data;	// fetching prestored lists
 		}).error(function(err) {
 			alert(err);
