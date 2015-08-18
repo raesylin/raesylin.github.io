@@ -1,0 +1,44 @@
+[
+	{
+		"listName": "lunch",
+		"listItem": [
+			{
+				"itemName": "instant noodles",
+				"chosen": false
+			},
+			{
+				"itemName": "hot dog",
+				"chosen": false
+			},
+			{
+				"itemName": "dumplings",
+				"chosen": false
+			},
+			{
+				"itemName": "Vietnamese",
+				"chosen": false
+			}
+		]
+	},
+	{
+		"listName": "alcohol",
+		"listItem": [
+			{
+				"itemName": "beer",
+				"chosen": false
+			},
+			{
+				"itemName": "white wine",
+				"chosen": false
+			},
+			{
+				"itemName": "red wine",
+				"chosen": false
+			},
+			{
+				"itemName": "cocktail",
+				"chosen": false
+			}
+		]
+	}
+]

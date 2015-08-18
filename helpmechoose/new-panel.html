@@ -1,0 +1,33 @@
+<div id="listContainer" ng-controller="NewListController as listCtrl">
+	<div class="listPane" id="listHead">
+		<h2>Make a new list</h2>
+	</div>
+	<div class="row">
+		<div class="listPane" id="listFormContainer">
+			<form id="listForm" ng-submit="listCtrl.addItem()">
+	 			<div class="col-lg-6 form-group">
+	    			<div class="input-group">
+	      				<input type="text" class="form-control" placeholder="New item..." ng-model="listCtrl.item.itemName" autofocus>
+						<span class="input-group-btn">
+	        			<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-plus"></span></button>
+	      				</span>
+	    			</div><!-- /input-group -->
+	  			</div><!-- /.col-lg-6 -->
+			</form>
+		</div>
+	</div>
+	<list-content></list-content>
+<!-- 	<div class="row">
+		<div class="col-lg-6" id="listContent">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="item in listCtrl.list"> <span ng-class="{chosen:item.chosen}">{{item.itemName}}</span> <span class="badge"><a href ng-click="listCtrl.removeItem(item)"><span class="glyphicon glyphicon-remove"></span></a></span></li>
+			</ul>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<button type="button" class="btn btn-default" ng-click="listCtrl.makeChoice()">Choose One!</button>
+			<button type="button" class="btn btn-default" ng-click="listCtrl.clearList()">Clear List</button>
+		</div>
+	</div> -->
+</div>
