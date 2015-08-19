@@ -27,7 +27,7 @@
 	});
 
 	app.controller('TabController', function() {
-		this.tab = 1;
+		this.tab = 3;
 
 		this.selectTab = function(setTab) {
 			this.tab = setTab;
@@ -105,6 +105,10 @@
 
 		this.reloadList = function() {
 			choice.selectList(choice.presets[choice.listIndex]);
+		};
+
+		this.hasItem = function() {
+			return choice.list.length;
 		};
 	}]);
 

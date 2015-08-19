@@ -1,16 +1,18 @@
-	<div class="row">
-		<div class="col-lg-6" id="listContent">
-			<ul class="list-group">
-				<li ng-class="{chosen:item.chosen}" class="list-group-item" ng-repeat="item in listCtrl.list"> 
-					{{item.itemName}}
-					<span class="badge"><a href ng-click="listCtrl.removeItem(item)"><span class="glyphicon glyphicon-remove"></span></a></span></li>
-			</ul>
-		</div>	
-	</div>
-	<div class="row">
-		<div class="col-lg-6">
+<div class="row">
+	<div class="col-xs-12" id="listContent">
+		<ul class="list-group">
+			<li ng-class="{'list-group-item-success':item.chosen}" class="list-group-item" ng-repeat="item in listCtrl.list"> 
+				{{item.itemName}}
+				<span class="badge"><a href ng-click="listCtrl.removeItem(item)"><span class="glyphicon glyphicon-remove"></span></a></span></li>
+		</ul>
+	</div>	
+</div>
+<div class="row" ng-show="listCtrl.hasItem()">
+	<div class="col-xs-12">
+		<div class="center-block">
 			<button type="button" class="btn btn-warning" ng-click="listCtrl.makeChoice()">Choose One!</button>
 			<button type="button" class="btn btn-info" ng-click="listCtrl.reloadList()" ng-show="tab.isSelected(2)">Reload List Content</button>
 			<button type="button" class="btn btn-default" ng-click="listCtrl.clearList()" ng-hide="tab.isSelected(2)">Clear List</button>
 		</div>
 	</div>
+</div>
