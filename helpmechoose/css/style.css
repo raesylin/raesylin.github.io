@@ -33,7 +33,8 @@ a, a:hover, a:visited {
 .custom-header > h4 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: lighter;
-	color: #800000
+	color: #800000;
+	padding-bottom: 15px;
 }
 
 .custom-header {
@@ -126,6 +127,7 @@ a, a:hover, a:visited {
 
 	.custom-header {
 		height: 200px;
+		padding-top: 15px;
 	}
 
 	.tab-deco {
