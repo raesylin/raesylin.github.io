@@ -108,6 +108,7 @@ a, a:hover, a:visited {
 
 	.custom-header {
 		height: 180px;
+		padding-top: 15px;
 	}
 
 	.tab-deco {
