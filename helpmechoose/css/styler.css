@@ -71,8 +71,8 @@ a, a:hover, a:visited {
 	vertical-align: middle;
 	/*padding-top: 20px;*/
 	color: #FFFFFF;
-	height: 120px;
-	width: 120px;
+	height: 100px;
+	width: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 4em;
@@ -116,11 +116,11 @@ a, a:hover, a:visited {
 	}
 
 	.custom-header {
-		height: 220px;
+		height: 200px;
 	}
 
 	.tab-deco {
-		height: calc(100vh - 310px);
+		height: calc(100vh - 290px);
 	}
 
 	.function-name {

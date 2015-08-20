@@ -28,7 +28,8 @@
 			</div>
 		</form>
 	</div>
-	<div class="col-xs-4">
-		<button type="button" class="btn btn-default numResult" ng-show="num.isNumDefined()">{{num.randomNum}}</button>
+	<div class="col-xs-4" ng-show="num.isNumDefined()">
+		<p>The result is...</p>
+		<button type="button" class="btn btn-default numResult">{{num.randomNum}}</button>
 	</div>
 </div>
