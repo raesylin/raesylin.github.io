@@ -90,7 +90,7 @@ a, a:hover, a:visited {
 @media (max-width: 400px) {
 
 	#title {
-		font-size: 2.0em;
+		font-size: 1.5em;
 	}
 
 	.function-name {
