@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"pd",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"backgrou",
+				"background"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"rand",
+				"randomNum"
+			],
+			[
+				"current",
+				"currentChoice"
+			],
+			[
+				"list",
+				"listName"
+			],
+			[
+				"presetsB",
+				"presetsBackUp"
+			],
+			[
+				"new",
+				"newListName"
+			],
+			[
+				"presets",
+				"presetsBackUp"
+			],
+			[
+				"chosen",
+				"chosenNum"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
 				"crime",
 				"crimeData"
 			],
@@ -56,10 +116,6 @@
 				"allBindings"
 			],
 			[
-				"text",
-				"text-decoration"
-			],
-			[
 				"padd",
 				"padding-left"
 			],
@@ -78,10 +134,6 @@
 			[
 				"min",
 				"min-height"
-			],
-			[
-				"border",
-				"border-color"
 			],
 			[
 				"bord",
@@ -268,10 +320,6 @@
 				"catsView"
 			],
 			[
-				"new",
-				"newName"
-			],
-			[
 				"getcat",
 				"getCurrentCat"
 			],
@@ -448,10 +496,6 @@
 				"_1x"
 			],
 			[
-				"list",
-				"list-style"
-			],
-			[
 				"inline",
 				"inline-block"
 			],
@@ -467,12 +511,29 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1335,
+				"buffer_size": 1856,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "list-panel.html",
+			"file": "indexr.html",
+			"settings":
+			{
+				"buffer_size": 2387,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "new-panel.html",
+			"settings":
+			{
+				"buffer_size": 827,
+				"line_ending": "Unix",
+				"name": "list-panel.html"
+			}
+		},
+		{
+			"file": "preset-panel.html",
 			"settings":
 			{
 				"buffer_size": 440,
@@ -480,26 +541,18 @@
 			}
 		},
 		{
-			"file": "listStorage.json",
+			"file": "num-panel.html",
 			"settings":
 			{
-				"buffer_size": 581,
+				"buffer_size": 1331,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "script/app.js",
+			"file": "list-content.html",
 			"settings":
 			{
-				"buffer_size": 74,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "script/directives/list.js",
-			"settings":
-			{
-				"buffer_size": 505,
+				"buffer_size": 876,
 				"line_ending": "Unix"
 			}
 		},
@@ -507,15 +560,31 @@
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 1445,
+				"buffer_size": 1762,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/sylin/Projects/WebProjects/libraries/layout.css",
+			"file": "css/styler.css",
 			"settings":
 			{
-				"buffer_size": 492,
+				"buffer_size": 2233,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "script/app.js",
+			"settings":
+			{
+				"buffer_size": 2471,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "script/directives/num.js",
+			"settings":
+			{
+				"buffer_size": 630,
 				"line_ending": "Unix"
 			}
 		}
@@ -581,10 +650,16 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose"
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script/directives"
 	],
 	"file_history":
 	[
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/presetStorage.json",
+		"/Users/sylin/Projects/WebProjects/libraries/layout.css",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script/directives/panel.js",
+		"/Users/sylin/Projects/WebProjects/todomvc/todomvc/examples/angularjs/js/controllers/todoCtrl.js",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/untitled.sublime-project",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/neighborhoodMap/list-pane.html",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/index.html",
@@ -699,7 +774,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -713,6 +788,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"control-label text-right",
+			"2",
+			"custom-nav",
+			"div",
+			"func",
+			"text",
+			"choice.list",
+			"preset",
+			"app.list",
+			"list",
+			"store",
+			"delete",
+			"list",
 			"4",
 			"2",
 			"i",
@@ -813,7 +901,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -822,34 +910,95 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1335,
+						"buffer_size": 1856,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								49,
-								49
+								1620,
+								1620
 							]
 						],
 						"settings":
 						{
-							"dfw_is_in_fs": false,
-							"dfw_side_bar_vis": true,
+							"dfw_is_in_fs": true,
+							"dfw_side_bar_vis": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 130.0,
+						"translation.y": 156.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "list-panel.html",
+					"file": "indexr.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2387,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2160,
+								2160
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 536.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "new-panel.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								108
+							]
+						],
+						"settings":
+						{
+							"auto_name": "list-panel.html",
+							"dfw_is_in_fs": true,
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "preset-panel.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -860,13 +1009,14 @@
 						"selection":
 						[
 							[
-								440,
-								0
+								132,
+								132
 							]
 						],
 						"settings":
 						{
-							"dfw_side_bar_vis": true,
+							"dfw_is_in_fs": true,
+							"dfw_side_bar_vis": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -878,26 +1028,59 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "listStorage.json",
+					"buffer": 4,
+					"file": "num-panel.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 581,
+						"buffer_size": 1331,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								579,
-								579
+								1143,
+								1143
 							]
 						],
 						"settings":
 						{
-							"dfw_side_bar_vis": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"dfw_is_in_fs": true,
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "list-content.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								428,
+								428
+							]
+						],
+						"settings":
+						{
+							"dfw_is_in_fs": true,
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -913,124 +1096,123 @@
 			"sheets":
 			[
 				{
-					"buffer": 3,
-					"file": "script/app.js",
+					"buffer": 6,
+					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 74,
+						"buffer_size": 1762,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								72,
-								72
+								918,
+								780
 							]
 						],
 						"settings":
 						{
-							"dfw_is_in_fs": false,
-							"dfw_side_bar_vis": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"dfw_is_in_fs": true,
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 565.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "script/directives/list.js",
+					"buffer": 7,
+					"file": "css/styler.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 505,
+						"buffer_size": 2233,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								482,
-								482
+								1730,
+								1730
 							]
 						],
 						"settings":
 						{
-							"dfw_side_bar_vis": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1440.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "css/style.css",
+					"buffer": 8,
+					"file": "script/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1445,
+						"buffer_size": 2471,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								555,
+								555
 							]
 						],
 						"settings":
 						{
-							"dfw_is_in_fs": false,
-							"dfw_side_bar_vis": true,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"dfw_is_in_fs": true,
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 83.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/Users/sylin/Projects/WebProjects/libraries/layout.css",
+					"buffer": 9,
+					"file": "script/directives/num.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 492,
+						"buffer_size": 630,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								492,
-								0
+								613,
+								613
 							]
 						],
 						"settings":
 						{
-							"dfw_is_in_fs": false,
-							"dfw_side_bar_vis": true,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1064,7 +1246,7 @@
 		"cols":
 		[
 			0.0,
-			0.448471069336,
+			0.550814819336,
 			1.0
 		],
 		"rows":
@@ -1120,14 +1302,14 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 177.0,
 	"status_bar_visible": true,
 	"template_settings":
