@@ -3,7 +3,7 @@ body {
 	line-height: 1.2em;
 	font-family: Helvetica;
 	font-weight: lighter;
-	background-color: #FFF1E2;
+	background-color: lightseagreen;
 }
 
 a, a:hover, a:visited {
@@ -16,7 +16,7 @@ a, a:hover, a:visited {
 	font-family: 'Indie Flower', cursive;
 	color: #fff;
 	font-weight: normal;
-	text-shadow: darkgray 1px 1px 2px;
+	text-shadow: darkgray -2px -2px 2px;
 	display: inline-block;
 	vertical-align: middle;
 	float: none;
@@ -33,7 +33,7 @@ a, a:hover, a:visited {
 .custom-header > h4 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: lighter;
-	color: #800000;
+	color: azure;
 	padding-bottom: 15px;
 }
 
