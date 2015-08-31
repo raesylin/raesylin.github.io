@@ -27,7 +27,7 @@
 	});
 
 	app.controller('TabController', function() {
-		this.tab = 3;
+		this.tab = 1;
 
 		this.selectTab = function(setTab) {
 			this.tab = setTab;

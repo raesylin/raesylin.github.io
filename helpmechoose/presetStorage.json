@@ -15,7 +15,19 @@
 				"chosen": false
 			},
 			{
+				"itemName": "pizza",
+				"chosen": false
+			},
+			{
 				"itemName": "Vietnamese",
+				"chosen": false
+			},
+			{
+				"itemName": "taco",
+				"chosen": false
+			},
+			{
+				"itemName": "sandwich",
 				"chosen": false
 			}
 		]
@@ -49,15 +61,15 @@
 				"chosen": false
 			},
 			{
-				"itemName": "circle crackers",
+				"itemName": "crackers",
 				"chosen": false
 			},
 			{
-				"itemName": "gold fish crackers",
+				"itemName": "chips",
 				"chosen": false
 			},
 			{
-				"itemName": "square ice cream",
+				"itemName": "ice cream",
 				"chosen": false
 			}
 		]
