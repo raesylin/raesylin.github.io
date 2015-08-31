@@ -4,6 +4,138 @@
 		"selected_items":
 		[
 			[
+				"b",
+				"bolder"
+			],
+			[
+				"ine",
+				"index	.index()"
+			],
+			[
+				"hov",
+				"hoveredItem-1"
+			],
+			[
+				"item",
+				"itemspan"
+			],
+			[
+				"ho",
+				"hoveredItem-1"
+			],
+			[
+				"hover",
+				"hoveredItem-1"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"left",
+				"leftColumnColor"
+			],
+			[
+				"small",
+				"smallCircleBorderWidth"
+			],
+			[
+				"circle",
+				"circleBorderWidth"
+			],
+			[
+				"brand",
+				"brandingPaddingLarge"
+			],
+			[
+				"brading",
+				"brandingPaddingLarge"
+			],
+			[
+				"smallC",
+				"smallCircleBorderWidth"
+			],
+			[
+				"smallCircle",
+				"smallCircleVerticalMargin"
+			],
+			[
+				"branding",
+				"brandingHeightSmall"
+			],
+			[
+				"default",
+				"defaultFontSize"
+			],
+			[
+				"rightcontent",
+				"rightContentWidthLarge"
+			],
+			[
+				"defa",
+				"defaultFont"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"smallCir",
+				"smallCircleMargin"
+			],
+			[
+				"leftcolumn",
+				"leftColumnSize"
+			],
+			[
+				"smallci",
+				"smallcirclesTotleHeight"
+			],
+			[
+				"backgorund",
+				"background-color"
+			],
+			[
+				"toggle",
+				"toggleClass	.toggleClass()"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"circleBorder",
+				"circleBorderWidth"
+			],
+			[
+				"circle-",
+				"circle-num"
+			],
+			[
+				"circle-border",
+				"circle-border-width"
+			],
+			[
+				"middle",
+				"middle-circle-color"
+			],
+			[
+				"left-",
+				"left-column-color"
+			],
+			[
+				"inlie",
+				"inline-block"
+			],
+			[
+				"butt",
+				"buttonPadding"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
 				"pd",
 				"padding-top"
 			],
@@ -120,10 +252,6 @@
 				"padding-left"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
 				"max-",
 				"max-width"
 			],
@@ -208,10 +336,6 @@
 				"crimeMapButton"
 			],
 			[
-				"toggle",
-				"togglePane"
-			],
-			[
 				"vis",
 				"visualization"
 			],
@@ -274,10 +398,6 @@
 			[
 				"load",
 				"loadScript"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"add",
@@ -394,189 +514,72 @@
 			[
 				"each",
 				"each	$.each()"
-			],
-			[
-				"nyt",
-				"nytHeaderElem"
-			],
-			[
-				"street",
-				"streetviewURL"
-			],
-			[
-				"str",
-				"streetview"
-			],
-			[
-				"localiz",
-				"localizedRuleName"
-			],
-			[
-				"rule",
-				"ruleResults"
-			],
-			[
-				"page",
-				"pageStats"
-			],
-			[
-				"total",
-				"totalBytes"
-			],
-			[
-				"for",
-				"for	for (…) {…}"
-			],
-			[
-				"form",
-				"formattedHTMLprojectImage"
-			],
-			[
-				"proj",
-				"project-entry"
-			],
-			[
-				"formm",
-				"formattedHTMLprojectDescription"
-			],
-			[
-				"forma",
-				"formattedHTMLprojectTitle"
-			],
-			[
-				"proje",
-				"project"
-			],
-			[
-				"da",
-				"dates"
-			],
-			[
-				"con",
-				"convert"
-			],
-			[
-				"log",
-				"logClicks"
-			],
-			[
-				"formatted",
-				"formattedHTMLworkEmployer"
-			],
-			[
-				"die",
-				"Diego"
-			],
-			[
-				"cont",
-				"contacts"
-			],
-			[
-				"formatt",
-				"formattedName"
-			],
-			[
-				"name",
-				"nameArray"
-			],
-			[
-				"fin",
-				"finalName"
-			],
-			[
-				"formated",
-				"formattedRole"
-			],
-			[
-				"fist",
-				"firstName"
-			],
-			[
-				"_",
-				"_1x"
-			],
-			[
-				"inline",
-				"inline-block"
-			],
-			[
-				"convert",
-				"convert_path"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/index.html",
 			"settings":
 			{
-				"buffer_size": 2390,
+				"buffer_size": 2340,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "presetStorage.json",
+			"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/about.html",
 			"settings":
 			{
-				"buffer_size": 1030,
+				"buffer_size": 1354,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "new-panel.html",
+			"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/resume.html",
 			"settings":
 			{
-				"buffer_size": 827,
-				"line_ending": "Unix",
-				"name": "list-panel.html"
-			}
-		},
-		{
-			"file": "preset-panel.html",
-			"settings":
-			{
-				"buffer_size": 473,
+				"buffer_size": 2050,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "list-content.html",
+			"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/portfolio.html",
 			"settings":
 			{
-				"buffer_size": 906,
+				"buffer_size": 2660,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "num-panel.html",
+			"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/contact.html",
 			"settings":
 			{
-				"buffer_size": 1331,
+				"buffer_size": 77,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/style.css",
+			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 2305,
+				"buffer_size": 8912,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "script/app.js",
+			"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/script/app.js",
 			"settings":
 			{
-				"buffer_size": 2471,
+				"buffer_size": 1904,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "script/directives/num.js",
+			"file": "style.less",
 			"settings":
 			{
-				"buffer_size": 630,
+				"buffer_size": 9924,
 				"line_ending": "Unix"
 			}
 		}
@@ -621,7 +624,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 432.0
+		"width": 440.0
 	},
 	"console":
 	{
@@ -642,15 +645,37 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose",
-		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script",
-		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script/directives"
+		"/Users/sylin/Web/portfolio/raesylin.github.io/resume",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/resume/css",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/resume/script"
 	],
 	"file_history":
 	[
-		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/list-content.html",
-		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/indexr.html",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/neighborhoodMap/neighborhoodMap.sublime-project",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/resume/index.html",
+		"/Users/sylin/Projects/WebProjects/seo/seo.html",
+		"/Users/sylin/Projects/WebProjects/less/layout.css",
+		"/Users/sylin/Projects/WebProjects/less/tutorial.css",
+		"/Users/sylin/Projects/WebProjects/less/index.html",
+		"/Users/sylin/Projects/WebProjects/less/layout-test.html",
+		"/Users/sylin/Projects/WebProjects/less/tutorial.less",
+		"/Users/sylin/Library/Application Support/Sublime Text 3/Packages/User/less2css.sublime-settings",
+		"/Users/sylin/Library/Application Support/Sublime Text 3/Packages/Less2Css/less2css.sublime-settings",
+		"/Users/sylin/Library/Application Support/Sublime Text 3/Packages/LESS/README.md",
+		"/Users/sylin/Projects/WebProjects/learnAngularJS/angular-phonecat/app/index.html",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/helpmechoose.sublime-workspace",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/index.html",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/helpmechoose.sublime-project",
+		"/Users/sylin/Projects/WebProjects/learnAngularJS/tutorial/style/style.css",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script/directives/num.js",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script/app.js",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/css/styler.css",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/css/style.css",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/list-content.html",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/num-panel.html",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/preset-panel.html",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/new-panel.html",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/indexr.html",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/presetStorage.json",
 		"/Users/sylin/Projects/WebProjects/libraries/layout.css",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script/directives/panel.js",
@@ -753,19 +778,7 @@
 		"/Users/sylin/Projects/WebProjects/portfolio/bootstrap/css/style.css",
 		"/Users/sylin/Downloads/Start/main.css",
 		"/Users/sylin/Downloads/Start/index.html",
-		"/Users/sylin/Projects/WebProjects/portfolio/bootstrap/index.html",
-		"/Users/sylin/Projects/WebProjects/portfolio/bootstrap/test.html",
-		"/Users/sylin/Projects/WebProjects/portfolio/toplist/style.css",
-		"/Users/sylin/Projects/WebProjects/portfolio/toplist/index.html",
-		"/Users/sylin/Projects/WebProjects/portfolio/framework/css/main.css",
-		"/Users/sylin/Projects/WebProjects/portfolio/framework/test.html",
-		"/Users/sylin/Projects/WebProjects/portfolio/bootstrap/bootstrap-prestructure.html",
-		"/Users/sylin/Library/Application Support/Sublime Text 3/Settings/SideBarEnhancements.json",
-		"/Users/sylin/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
-		"/Users/sylin/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
-		"/Users/sylin/Projects/WebProjects/rachel-home/style.css",
-		"/Users/sylin/Projects/WebProjects/rachel-home/app.html",
-		"/Users/sylin/Projects/WebProjects/rachel-home/test.css"
+		"/Users/sylin/Projects/WebProjects/portfolio/bootstrap/index.html"
 	],
 	"find":
 	{
@@ -783,6 +796,46 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"2px",
+			"224",
+			"1",
+			"2",
+			"lightgrey",
+			"p",
+			"section",
+			"status",
+			"strong",
+			"em",
+			"choose",
+			"hoveredItem-1",
+			"showTooltip",
+			"showInfo",
+			"span",
+			"div",
+			"leftcolumnsize",
+			"smallcirclesTotalHeight",
+			"50px",
+			"margin",
+			"padding",
+			"defaultEffect",
+			"padding",
+			"p",
+			"span",
+			"div",
+			"9999px",
+			"@circleDiameter",
+			"@circles-total-height",
+			"@circle-num",
+			"@circle-borderColor",
+			"@circle-background",
+			"@circle-border-width",
+			"@circle-diameter",
+			"@left-column-color",
+			"@box-sizing",
+			"@circle-radius",
+			"middle-circle-borderColor",
+			"middle-circle-color",
+			"50px",
 			"control-label text-right",
 			"2",
 			"custom-nav",
@@ -870,12 +923,7 @@
 			"prepand",
 			"sfo",
 			"grasshopper",
-			"postcard",
-			"cockatoos",
-			".jpg",
-			"images_src",
-			"PIGU",
-			"pigu"
+			"postcard"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -896,182 +944,28 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2390,
+						"buffer_size": 2340,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1057,
-								1057
+								2237,
+								2237
 							]
 						],
 						"settings":
 						{
-							"dfw_is_in_fs": true,
-							"dfw_side_bar_vis": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "presetStorage.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1030,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								985,
-								985
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 675.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "new-panel.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 827,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								314,
-								314
-							]
-						],
-						"settings":
-						{
-							"auto_name": "list-panel.html",
-							"dfw_is_in_fs": true,
-							"dfw_side_bar_vis": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "preset-panel.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 473,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								217,
-								217
-							]
-						],
-						"settings":
-						{
-							"dfw_is_in_fs": true,
-							"dfw_side_bar_vis": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "list-content.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 906,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								483,
-								483
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "num-panel.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1331,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								754,
-								754
-							]
-						],
-						"settings":
-						{
-							"dfw_is_in_fs": true,
-							"dfw_side_bar_vis": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -1081,39 +975,179 @@
 					},
 					"stack_index": 4,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 6,
-					"file": "css/style.css",
+					"buffer": 1,
+					"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/about.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2305,
+						"buffer_size": 1354,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2305,
-								2305
+								994,
+								994
 							]
 						],
 						"settings":
 						{
-							"dfw_is_in_fs": true,
-							"dfw_side_bar_vis": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2274.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/resume.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37,
+								37
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/portfolio.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2660,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1442,
+								1442
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/contact.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 77,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8912,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7692,
+								7692
+							]
+						],
+						"settings":
+						{
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6407.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "/Users/sylin/Web/portfolio/raesylin.github.io/resume/script/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1135,
+								1135
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1044.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1121,62 +1155,31 @@
 				},
 				{
 					"buffer": 7,
-					"file": "script/app.js",
+					"file": "style.less",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2471,
+						"buffer_size": 9924,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								556,
-								556
+								9630,
+								9630
 							]
 						],
 						"settings":
 						{
-							"dfw_is_in_fs": true,
 							"dfw_side_bar_vis": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/LESS/LESS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 59.0,
+						"translation.y": 7632.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "script/directives/num.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 630,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								548,
-								548
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1210,7 +1213,7 @@
 		"cols":
 		[
 			0.0,
-			0.474252319336,
+			0.45390625,
 			1.0
 		],
 		"rows":
@@ -1229,7 +1232,7 @@
 		"height": 98.0
 	},
 	"pinned_build_system": "",
-	"project": "helpmechoose.sublime-project",
+	"project": "resume.sublime-project",
 	"replace":
 	{
 		"height": 46.0
@@ -1243,7 +1246,7 @@
 		[
 			[
 				"",
-				"framework/test.css"
+				"~/Projects/WebProjects/less/layout.css"
 			]
 		],
 		"width": 0.0
