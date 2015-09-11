@@ -519,7 +519,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 326,
+				"buffer_size": 2391,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "neighborhoodMap/index.html",
+			"settings":
+			{
+				"buffer_size": 2866,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "neighborhoodMap/untitled.sublime-project",
+			"settings":
+			{
+				"buffer_size": 243,
 				"line_ending": "Unix"
 			}
 		},
@@ -527,7 +543,24 @@
 			"file": "css/style.less",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 9924,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "script/googleAnalytics.js",
+			"settings":
+			{
+				"buffer_size": 408,
+				"line_ending": "Unix",
+				"name": "<script>"
+			}
+		},
+		{
+			"file": "resume/resume.sublime-project",
+			"settings":
+			{
+				"buffer_size": 45,
 				"line_ending": "Unix"
 			}
 		}
@@ -593,10 +626,13 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/sylin/Web/portfolio/raesylin.github.io",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/neighborhoodMap",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/resume"
 	],
 	"file_history":
 	[
+		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/index.html",
 		"/Users/sylin/Projects/WebProjects/less/layout.css",
 		"/Users/sylin/Projects/WebProjects/less/tutorial.css",
 		"/Users/sylin/Projects/WebProjects/less/index.html",
@@ -607,7 +643,6 @@
 		"/Users/sylin/Library/Application Support/Sublime Text 3/Packages/LESS/README.md",
 		"/Users/sylin/Projects/WebProjects/learnAngularJS/angular-phonecat/app/index.html",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/helpmechoose.sublime-workspace",
-		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/index.html",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/helpmechoose.sublime-project",
 		"/Users/sylin/Projects/WebProjects/learnAngularJS/tutorial/style/style.css",
 		"/Users/sylin/Web/portfolio/raesylin.github.io/helpmechoose/script/directives/num.js",
@@ -855,7 +890,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -864,20 +899,50 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 326,
+						"buffer_size": 2391,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								293,
-								293
+								788,
+								738
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "neighborhoodMap/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								989,
+								989
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -885,20 +950,14 @@
 					},
 					"stack_index": 1,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 1,
-					"file": "css/style.less",
-					"semi_transient": false,
+					"buffer": 2,
+					"file": "neighborhoodMap/untitled.sublime-project",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 243,
 						"regions":
 						{
 						},
@@ -911,13 +970,106 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/LESS/LESS.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "css/style.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								361,
+								361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "script/googleAnalytics.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<script>",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "resume/resume.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1007,7 +1159,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
