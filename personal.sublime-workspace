@@ -515,6 +515,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 7582,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/style.less",
+			"settings":
+			{
+				"buffer_size": 4064,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -523,7 +539,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 135.0,
+		"height": 169.0,
 		"last_filter": "install",
 		"selected_items":
 		[
@@ -556,7 +572,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 440.0
+		"width": 600.0
 	},
 	"console":
 	{
@@ -577,7 +593,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/sylin/Web/portfolio/raesylin.github.io"
+		"/Users/sylin/Web/portfolio/raesylin.github.io",
+		"/Users/sylin/Web/portfolio/raesylin.github.io/css"
 	],
 	"file_history":
 	[
@@ -712,7 +729,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -839,8 +856,77 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3490,
+								3490
+							]
+						],
+						"settings":
+						{
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1250.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "css/style.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4064,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								672,
+								672
+							]
+						],
+						"settings":
+						{
+							"dfw_side_bar_vis": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -861,11 +947,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.58671875,
 			1.0
 		],
 		"rows":
@@ -928,7 +1021,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 223.0,
 	"status_bar_visible": true,
 	"template_settings":
