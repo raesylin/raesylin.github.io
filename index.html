@@ -1,62 +1,154 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> - Rachel Lin</title>
-	<meta name="robots" content="INDEX,FOLLOW" />
-	<meta name="robots" content="noimageindex">
-	<meta name="description">
-	<link href='//fonts.googleapis.com/css?family=PT+Sans|Lato:300,700|Lobster' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="//cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-	<link rel="stylesheet" src="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
-	<link rel="stylesheet" href="css/style.css">
-	<script src="script/googleAnalytics.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Rae - Rachel Lin is the personal website and portfolio of front end developer Rachel Lin.">	
+		<meta name="author" content="Rachel Lin">
+		<title>Rae - Rachel Lin</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300|IM+Fell+English+SC|Montserrat' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+		<link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-controller="TabController as tab">
-<div class="container-wrapper">
-	<!-- container -->
-	<div class="container">
-		<!-- left-column -->
-		<div class="left-column">
-		</div><!--/left-column-->
-		<!-- middle-column -->
-		<div class="middle-column">
-			<div class="middle-circle section-selector" ng-click="tab.selectTab('resume')">
-				<a href="#">Resume</a>
-			</div>
-			<div class="middle-circle section-selector" ng-click="tab.selectTab('portfolio')">
-				<a href="#">Portfolio</a>
-			</div>
-			<div class="middle-circle section-selector" ng-click="tab.selectTab('about')">
-				<a href="#">Contact</a>
-			</div>
-		</div><!--/middle-column-->
-		<!-- right-column -->
-		<div class="right-column">
-			<div class="branding">
-				<h1><a href="#" ng-click="tab.selectTab('about')"><span class="lnr lnr-leaf"></span> Rachel Lin</a></h1>
-			</div>
-			<div class="main" ng-show="tab.isSelected('about')">
-				<about-tab></about-tab>
-			</div>
-			<div class="main" ng-show="tab.isSelected('resume')">
-				<resume-tab></resume-tab>
-			</div>
-			<div class="main" ng-show="tab.isSelected('portfolio')">
-				<portfolio-tab></portfolio-tab>
-			</div>
-<!-- 			<div class="main" ng-show="tab.isSelected('contact')">
-				<contact-tab></contact-tab>
-			</div> -->
-		</div><!--/right-column-->
-	</div><!--/container-->
-</div>
-	<!-- Load scripts -->
-	<script src="script/app.js"></script>
-	<!-- End of scripts -->
+<body>
+	<!-- Navigation bar -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><span class="lnr lnr-leaf"></span> Rae - Rachel Lin</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav pull-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social Media <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://twitter.com/raesylin" target="_blank">Twitter</a></li>
+                    <li><a href="http://linkedin.com/in/sylingibu" target="_blank">LinkedIn</a></li>
+                    <li><a href="http://github.com/raesylin/" target="_blank">Github</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="img/brand-img-adjust.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Rachel Lin</h1>
+                         
+          <p>A Front End Developer in the beautiful San Diego area. Minimalist, usability, functionality, responsive are my favorite words when it comes to web development.</p>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div><!-- /.carousel -->
+
+
+	<div id="about"></div>
+
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+	
+    <div class="container marketing">
+
+      <!-- One column of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8 text-center">
+          <span class="lnr lnr-leaf brand-icon"></span> <span class="h2">about me</span>
+          <p class="lead">Hi, welcome to the personal website of <span class="brand-font">Rachel Lin</span>. I have 3+ years experience in web development / web management. I enjoy hand-coding HTML and CSS, and I am familiar with modern web application standard, libraries, and MV* frameworks. Scroll further to see my <a href="#portfolio">portfolio</a>.</p>
+
+        </div><!-- /.col-lg-4 -->
+
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider" id="portfolio">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">A completely new ASIAA dynamic website. </h2>
+          <p class="lead">An <a href="http://www.asiaa.sinica.edu.tw" target="_blank">academic website</a> focusing on showcasing the research projects, the press release, and the public information for scientific colloquium / seminars. The whole website was built from scratch when I was their webmaster. The current design was rebuilt by successive webmasters, however the fundamental layout, the UI logic, the code behind the scene remained the same. Backend built by PHP, MySQL.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block thumbnail" src="img/asiaa_snapshot-sm_2x.png" alt="ASIAA Website">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Random Choice. </h2>
+          <p class="lead">A simple <a href="http://raesylin.xyz/randomchoice/" target="_blank">web application</a> that enables users to draw a random choice from a variey of preset lists, from a user defined list, or get a random number between a user defined range. The application was built with AngularJS, jQuery and Bootstrap.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block thumbnail" src="img/choose_sm_2x.png" alt="Random Choice application snapshot">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">My Community.</h2>
+          <p class="lead">A <a href="http://raesylin.xyz/mycommunity/" target="_blank">web application</a> shows the trend of crime incidents over the past year around an user specified address. Map data is from Google Maps API; crime data is from Crime Data API by Mashape. Application is built by Knockout.js and jQuery.</p>
+        </div>
+        <div class="col-md-5">
+        	<picture>
+				<source media="(min-width: 480px)" srcset="img/crimemap_lg_2x.png 2x, img/crimemap_lg_1x.png 1x">
+				<source media="(max-width: 479px)" srcset="img/crimemap_md_2x.png 2x, img/crimemap_md_1x.png 1x">
+				<img src="img/crimemap_md_2x.png" alt="Neighborhood crime trend web application" class="featurette-image img-responsive center-block thumbnail">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015 <span class="brand-font">Rachel Lin</span> &middot;  <a href="mailto:raesylin@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+
 </body>
 </html>
