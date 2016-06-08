@@ -519,22 +519,42 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 8644,
+				"buffer_size": 9557,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "/* GLOBAL STYLES\n-------------------------------------------------- */\n/* Padding below the footer and lighter body text */\n\nbody {\n	font-family: 'Source Sans Pro', sans-serif;\n  	background-color: white;\n}\n\nfooter {\n	span {\n		color: #222;\n	}\n}\n\n.branding-img {\n  width: 1.3em;\n  height: auto;\n  display: inline !important;\n  line-height: 1.3em;\n}\n\n.branding-img-title {\n  width: 40px;\n  height: auto;\n  display: inline-block !important;\n  vertical-align: middle;\n  line-height: 1.1;\n}\n\n.brand-font {\n	font-family: 'IM Fell English SC', serif;\n}\n\n.navbar-brand {\n	.brand-font;\n	font-size: 1.3em;\n}\n\nh1 {\n	.brand-font;\n	font-size: 72px;\n}\n\n.h2 {\n	.brand-font;\n	font-size: 60px;\n}\n\n\n\n.first-slide {\n	bottom: 0px;\n	position: absolute;\n  width: 100%;\n  height: auto;\n}\n\n#about {\n	margin-top: 80px;\n}\n\n#heart {\n	color: red;\n}\n\n#footer {\n	color: grey;\n	margin-bottom: 20px;\n	margin-top: 20px;\n	a {\n		color: white;\n	}\n}\n\n.brand-icon {\n	font-size: 40px;\n}\n\n.grey-background {\n	height: 100px;\n	background-color: #222222;\n\n}\n\n.marketing {\n	color: #474747;\n}\n\n\n/* GLOBAL STYLES\n-------------------------------------------------- */\n/* Padding below the footer and lighter body text */\n\nbody {\n  padding-bottom: 40px;\n  color: #5a5a5a;\n}\n\n\n/* CUSTOMIZE THE NAVBAR\n-------------------------------------------------- */\n\n/* Special class on .container surrounding .navbar, used for positioning it into place. */\n.navbar-wrapper {\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  z-index: 20;\n}\n\n/* Flip around the padding for proper display in narrow viewports */\n.navbar-wrapper > .container {\n  padding-right: 0;\n  padding-left: 0;\n}\n.navbar-wrapper .navbar {\n  padding-right: 15px;\n  padding-left: 15px;\n}\n.navbar-wrapper .navbar .container {\n  width: auto;\n}\n\n\n/* CUSTOMIZE THE CAROUSEL\n-------------------------------------------------- */\n\n/* Carousel base class */\n.carousel {\n  height: 500px;\n}\n/* Since positioning the image, we need to help out the caption */\n.carousel-caption {\n  z-index: 10;\n  text-shadow: 0 3px 5px rgba(0,0,0,.6);\n}\n\n\n\n/* Declare heights because of positioning of img element */\n.carousel .item {\n  height: 500px;\n  background-color: transparent;	\n}\n.carousel-inner > .item > img {\n  position: absolute;\n  top: 0;\n  left: 0;\n  min-width: 100%;\n  min-height: 500px;\n}\n\n\n/* MARKETING CONTENT\n-------------------------------------------------- */\n\n/* Center align the text within the three columns below the carousel */\n.marketing .col-lg-4 {\n  margin-bottom: 20px;\n  margin-top: 40px;\n  text-align: center;\n}\n.marketing h2 {\n  font-weight: normal;\n}\n.marketing .col-lg-4 p {\n  margin-right: 10px;\n  margin-left: 10px;\n}\n\n\n/* Featurettes\n------------------------- */\n\n.featurette-divider {\n  margin: 80px 0; /* Space out the Bootstrap <hr> more */\n}\n\n/* Thin out the marketing headings */\n.featurette-heading {\n  font-weight: 300;\n  line-height: 1;\n  letter-spacing: -1px;\n}\n\n\n/* RESPONSIVE CSS\n-------------------------------------------------- */\n\n@media (min-width: 768px) {\n  // /* Navbar positioning foo */\n  // .navbar-wrapper {\n  //   // margin-top: 20px;\n  // }\n  // .navbar-wrapper .container {\n  //   padding-right: 15px;\n  //   padding-left: 15px;\n  // }\n  // .navbar-wrapper .navbar {\n  //   padding-right: 0;\n  //   padding-left: 0;\n  // }\n\n  .navbar-wrapper .container {\n  	width: 100%;\n  	margin: 0;\n  	// min-height: 80px;\n  }\n\n  .navbar-inverse {\n  	background-color: rgba(0, 0, 0, 0.5);\n  	border: 0;\n  }\n\n  /* The navbar becomes detached from the top, so we round the corners */\n  .navbar-wrapper .navbar {\n    border-radius: 4px;\n  }\n\n  /* Bump up size of carousel content */\n  .carousel-caption p {\n    margin-bottom: 20px;\n    font-size: 21px;\n    line-height: 1.4;\n  }\n\n/* Carousel base class */\n.carousel {\n  height: 75vh;\n  // margin-bottom: 60px;\n}\n\n/* Since positioning the image, we need to help out the caption */\n.carousel-caption {\n  z-index: 10;\n  bottom: 30%;\n}\n\n/* Declare heights because of positioning of img element */\n.carousel .item {\n  height: 75vh;\n  min-height: 60vh;\n  background-color: transparent;	\n}\n.carousel-inner > .item > img {\n  position: absolute;\n  top: 0;\n  left: 0;\n  min-width: 100%;\n  // max-height: 95vh;\n}\n\n\n  .featurette-heading {\n    font-size: 50px;\n  }\n}\n\n@media (min-width: 992px) {\n  .featurette-heading {\n    // margin-top: 120px;\n  }\n\n  .carousel .item {\n  	min-height: 80vh;\n  	height: 80vh;\n  }\n}\n",
 			"file": "css/style.less",
+			"file_size": 4389,
+			"file_write_time": 131091967690000000,
 			"settings":
 			{
-				"buffer_size": 4306,
-				"line_ending": "Unix"
+				"buffer_size": 4389,
+				"line_ending": "Unix",
+				"scratch": true
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/User/LESSc.sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/User/LESSc.sublime-build",
+					""
+				],
+				[
+					"Packages/User/LESSc.sublime-build",
+					"Minify"
+				]
+			],
+			[
+				"Packages/User/LESSc.sublime-build",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
@@ -728,7 +748,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -742,6 +762,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"featurette-heading",
+			"color",
+			"brand-font",
+			"carousel-caption",
+			"first",
 			"control-label text-right",
 			"2",
 			"custom-nav",
@@ -864,15 +889,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8644,
+						"buffer_size": 9557,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7724,
-								7724
+								3879,
+								3879
 							]
 						],
 						"settings":
@@ -880,61 +905,61 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker.tmTheme",
 							"dfw_side_bar_vis": false,
@@ -944,7 +969,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3995.0,
+						"translation.y": 1825.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -962,28 +987,90 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4306,
+						"buffer_size": 4389,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4319,
+								4319
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker.tmTheme",
 							"dfw_side_bar_vis": false,
-							"origin_encoding": "ASCII",
+							"force_encoding": "GBK",
+							"in_converting": true,
+							"origin_encoding": "GBK",
+							"revert_to_scratch": true,
 							"syntax": "Packages/LESS/LESS.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 663.0,
+						"translation.y": 5659.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1030,6 +1117,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 168.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -1038,7 +1129,7 @@
 	{
 		"height": 98.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Packages/User/LESSc.sublime-build",
 	"project": "personal.sublime-project",
 	"replace":
 	{
