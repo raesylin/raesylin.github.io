@@ -4,6 +4,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: white;
+  font-weight: lighter;
 }
 footer span {
   color: #222;
@@ -140,10 +141,16 @@ body {
   /* Space out the Bootstrap <hr> more */
 }
 /* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
+h2.featurette-heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
   line-height: 1;
   letter-spacing: -1px;
+  font-size: 265%;
+}
+p.lead {
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
 }
 /* RESPONSIVE CSS
 -------------------------------------------------- */
