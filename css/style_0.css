@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background-color: white;
   font-weight: lighter;
 }
@@ -23,22 +23,22 @@ footer span {
   line-height: 1.1;
 }
 .brand-font {
-  font-family: 'IM Fell English SC', serif;
+  font-family: "IM Fell English SC", serif;
 }
 .navbar-brand {
-  font-family: 'IM Fell English SC', serif;
+  font-family: "IM Fell English SC", serif;
   font-size: 1.3em;
 }
 h1 {
-  font-family: 'IM Fell English SC', serif;
+  font-family: "IM Fell English SC", serif;
   font-size: 72px;
 }
 .h2 {
-  font-family: 'IM Fell English SC', serif;
+  font-family: "IM Fell English SC", serif;
   font-size: 60px;
 }
 .first-slide {
-  bottom: 0px;
+  bottom: 0;
   position: absolute;
   width: 100%;
   height: auto;

@@ -1,149 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rae - Rachel Lin is the personal website and portfolio of front end developer Rachel Lin.">
-    <meta name="author" content="Rachel Lin">
-    <link rel="icon" href="img/branding/coffee32.png">
-    <title>Rae - Rachel Lin</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300|IM+Fell+English+SC|Raleway:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8" />
+	<title>Rae - Rachel Lin's Portfolio Site</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Rae - Rachel Lin is the personal website and portfolio of front end developer Rachel Lin.">
+	<meta name="author" content="Rachel Lin" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+	<link rel="icon" href="img/branding/coffee32.png" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300|IM+Fell+English+SC|IM+Fell+English|Raleway:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style_new.css" />
 </head>
-
 <body>
-    <!-- Navigation bar -->
-    <div class="navbar-wrapper">
-        <div class="container">
-            <nav class="navbar navbar-inverse navbar-static-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">
-                            <span class="lnr lnr-leaf"></span> Rae - Rachel Lin
-                        </a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav pull-right">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Live Sites <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="http://raesylin.xyz/apod/" target="_blank">APOD</a></li>
-                                    <li><a href="http://www.asiaa.sinica.edu.tw/" target="_blank">ASIAA</a></li>
-                                    <li><a href="http://raesylin.xyz/randomchoice/" target="_blank">Random Choice</a></li>
-                                    <li><a href="http://raesylin.xyz/mycommunity/" target="_blank">My Community</a></li>
-                                </ul>
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social Media <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="http://twitter.com/raesylin" target="_blank">Twitter</a></li>
-                                    <li><a href="http://linkedin.com/in/sylingibu" target="_blank">LinkedIn</a></li>
-                                    <li><a href="http://github.com/raesylin/" target="_blank">Github</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img class="first-slide" src="img/brand-img-may-resize.jpg" alt="San Diego sunset">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Rachel Lin</h1>
-                        <p>A Front End Developer in the beautiful San Diego area. Besides building websites, I love astronomy, beer, crab, tofu, Star Wars, ASOIAF. Yes, a nerd.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.carousel -->
-    <div id="about"></div>
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-    <div class="container marketing">
-        <!-- One column of text below the carousel -->
-        <div class="row">
-            <div class="col-lg-offset-2 col-lg-8 text-center">
-                <span class="lnr lnr-leaf brand-icon"></span>
-                <span class="h2">about me</span>
-                <p class="lead">Hi, welcome to the personal website of <span class="brand-font">RACHEL LIN</span>, a freelance front end developer. I have 3+ years experience in front end development / web management. I enjoy hand-coding HTML and CSS, and I am familiar with modern web application standard, libraries, and MV* frameworks, such as AngularJS, jQuery, Bootstrap, and Mobile First Design. Scroll further to see my <a href="#portfolio">portfolio</a> and the live sites.</p> For work request please <a href="mailto:raesylin@gmail.com">email me</a> for more information.
-            </div>
-            <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-        <!-- START THE FEATURETTES -->
-        <hr class="featurette-divider" id="portfolio">
-        <div class="row featurette">
-            <div class="col-md-7 col-md-push-5">
-                <h2 class="featurette-heading">A concept redesign of NASA's Astronomy Picture of the Day website </h2>
-                <p class="lead">A fully functional <a href="http://raesylin.xyz/apod/" target="_blank">concept redesign</a> with modern JavaScript framework and new HTML and CSS standards. The idea is to reorganize the user interface to be more user-friendly. I focused on showcasing the daily picture by making good use of the browser real estate and improving navigation flow. The site was built with AngularJS, jQuery, NASA APOD API, Youtube API, and other JavaScript plugins.</p>
-            </div>
-            <div class="col-md-5 col-md-pull-7">
-                <img class="featurette-image img-responsive center-block thumbnail" src="img/apod.jpg" alt="APOD">
-            </div>
-        </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Know Your Community</h2>
-                <p class="lead">A <a href="http://raesylin.xyz/mycommunity/" target="_blank">web application</a> showing the trend of crime incidents over the past year around an user specified address. Map data is from Google Maps API; crime data is from Crime Data API by Mashape. Application is built by Knockout.js and jQuery.</p>
-            </div>
-            <div class="col-md-5">
-                <picture>
+	<header class="container-fluid">
+		<div class="navbar-wrapper">
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">Rae - Rachel Lin</a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="active"><a href="#">Home</a></li>
+			        <li><a href="#about">About</a></li>
+			        <li><a href="#portfolio">Portfolio</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Live Sites Demo <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="http://raesylin.xyz/apod/" target="_blank">APOD</a></li>
+			            <li><a href="http://www.asiaa.sinica.edu.tw" target="_blank">ASIAA</a></li>
+			            <li><a href="http://raesylin.xyz/randomchoice/" target="_blank">Help Me Choose</a></li>
+			            <li><a href="http://raesylin.xyz/mycommunity/" target="_blank">My Community</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Socail Media <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="http://twitter.com/raesylin" target="_blank">Twitter</a></li>
+			            <li><a href="http://linkedin.com/in/sylingibu" target="_blank">LinkedIn</a></li>
+			            <li><a href="http://github.com/raesylin/" target="_blank">Github</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</div><!-- /.navbar-wrapper -->
+
+		<div class="branding-container">
+			<div class="branding">
+				<h1>Rachel Lin</h1>
+				<p>A Front End Developer in the beautiful San Diego area. Besides building websites, I love astronomy, beer, crab, tofu, Star Wars, ASOIAF. Yes, a nerd.</p>
+			</div><!-- /.branding -->
+			
+		</div><!-- /.branding-container-->
+	</header><!-- /.container-fluid -->
+	
+	<div class="container-fluid main" id="about">
+		<div class="row">
+			<div class="col-lg-offset-2 col-lg-8 text-center">
+				<h2>about me</h2>
+				<p class="lead">
+					Hi, welcome to the personal website of <span class="brand-font">RACHEL LIN</span>, a freelance front end developer. I have 3+ years experience as a webmaster and a front end developer. I enjoy hand-coding HTML5, CSS3, and programming with vanilla JavaScript as well as with the help of modern libraries such as jQuery and AngularJS. To me, making clean and beautiful web layout is just as exciting as creating fun web applications. I use Sublime Text, Sass, and Git in my workflow. Please scroll further to see my <a href="#portfolio">portfolio and links to the live sites</a>.
+				</p><!-- /.lead -->
+			</div><!-- /.col-lg-offset-2 col-lg-8 text-center -->
+		</div><!-- /.row -->
+	</div><!-- /#about.container main -->
+
+
+
+	<div class="container-fluid main" id="portfolio">
+		<div class="row">
+			<div class="col-lg-offset-2 col-lg-8 text-center">
+				<h2>portfolio</h2>
+				<p class="lead">
+					Here is a selection of my web projects.
+				</p><!-- /.lead -->
+			</div><!-- /.col-lg-offset-2 col-lg-8 text-center -->
+		</div><!-- /.row -->
+
+		<hr class="divider" />
+		
+		<div class="row item">
+			<div class="container">
+				<div class="col-md-6 col-md-push-6">
+				<h3>
+					NASA's Astronomy Picture of the Day Website Revamped
+				</h3><!-- /.p-heading -->
+				<p>
+					I don't know if you also feel the pain when browsing the <a href="http://apod.nasa.gov/" target="_blank">Astronomy Picture of the Day website of NASA</a>. Although I love the beautiful pictures curated and its in-depth explanation by professional astronomers, the interface and layout feel dated. As a personal project I tried to redesign and revamp part of the site with modern web standards. The idea is to reorganize the user interface and improve site navigation. I focused on showcasing the daily picture by making good use of the browser real estate and improving navigation flow. The site was built with AngularJS, jQuery, NASA APOD API, Youtube API, and other JavaScript plugins.
+				</p><!-- /.lead -->
+				<a href="http://raesylin.xyz/apod/" class="btn btn-default">Live Site</a>
+			</div><!-- /.col-md-7 col-md-push-5 -->			
+			<div class="col-md-6 col-md-pull-6">
+				<img src="img/apod-final.png" alt="" class="img-responsive center-block thumbnail" />
+			</div><!-- /.col-md-5 col-md-pull-7 -->
+			</div><!-- /.container item -->
+		</div><!-- /.row -->
+		
+		<hr class="divider" />
+
+		<div class="row item">
+			<div class="container">
+				<div class="col-md-6">
+				<h3>
+					My Community
+				</h3><!-- /.p-heading -->
+				<p>
+					This is a simple web application showing the heatmap of crime incidents over the past year around an user specified address. If crime data exist, a slidebar will appear, allowing users to scroll and see the trend of crime frequency changing over time. Map data is from Google Maps API; crime data is from Crime Data API on Mashape. Application is built with Knockout.js and jQuery.
+				</p><!-- /.lead -->
+				<a href="http://raesylin.xyz/mycommunity/" class="btn btn-default">Live Site</a>
+			</div><!-- /.col-md-7 col-md-push-5 -->			
+			<div class="col-md-6">
+				<picture>
                     <source media="(min-width: 480px)" srcset="img/crimemap_lg_2x.png 2x, img/crimemap_lg_1x.png 1x">
                     <source media="(max-width: 479px)" srcset="img/crimemap_md_2x.png 2x, img/crimemap_md_1x.png 1x">
-                    <img src="img/crimemap_md_2x.png" alt="Neighborhood crime trend web application" class="featurette-image img-responsive center-block thumbnail">
-            </div>
-        </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7 col-md-push-5">
-                <h2 class="featurette-heading">Help Me Choose </h2>
-                <p class="lead">A simple <a href="http://raesylin.xyz/randomchoice/" target="_blank">web application</a> that returns random results from a variety of pre-defined lists, a customized list, or random numbers between a user defined range. The application was built with AngularJS, jQuery, and Bootstrap.</p>
-            </div>
-            <div class="col-md-5 col-md-pull-7">
-                <img class="featurette-image img-responsive center-block thumbnail" src="img/choose_snapshot.png" alt="Random Choice application snapshot">
-            </div>
-        </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">A completely new ASIAA dynamic website </h2>
-                <p class="lead">An <a href="http://www.asiaa.sinica.edu.tw" target="_blank">academic website</a> showcasing the research projects, the press release, and the public information for scientific colloquium / seminars. The whole website was built from scratch when I was their webmaster. The current design was rebuilt by successive webmasters. However, the fundamental layout, the UI logic, and the codes behind the scene remain the same. Backend built by PHP, MySQL.</p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block thumbnail" src="img/asiaa_snapshot-sm_2x.png" alt="ASIAA Website">
-            </div>
-        </div>
-        <hr class="featurette-divider">
-        <!-- /END THE FEATURETTES -->
-        <!-- FOOTER -->
-        <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2016 <span class="brand-font">RACHEL LIN</span> &middot; <a href="mailto:raesylin@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a> &middot; Powered by <a href="http://getbootstrap.com" target="_blank">Bootstrap</a></p>
-        </footer>
-    </div>
-    <!-- /.container -->
-    <!-- Bootstrap core JavaScript
+                    <img src="img/crimemap_md_2x.png" alt="Neighborhood crime trend web application" class="img-responsive center-block thumbnail">
+                 </picture>
+			</div><!-- /.col-md-5 col-md-pull-7 -->
+			</div><!-- /.container item -->
+		</div><!-- /.row -->
+
+		<hr class="divider" />
+
+		<div class="row item">
+			<div class="container">
+				<div class="col-md-6 col-md-push-6">
+				<h3>
+					Help Me Choose
+				</h3><!-- /.p-heading -->
+				<p>
+					As someone who just can not decide what to eat for lunch every day, a web application that generates random results is life (or time) saver. This application has a variety of pre-defined lists. Users can also draw from his or her own custom list. It is also capable of producing random numbers from a user defined range, very helpful when buying lottery. The application was built with AngularJS, jQuery, and Bootstrap.
+				</p><!-- /.lead -->
+				<a href="http://raesylin.xyz/randomchoice/" class="btn btn-default">Live Site</a>
+			</div><!-- /.col-md-7 col-md-push-5 -->			
+			<div class="col-md-6 col-md-pull-6">
+				<img class="img-responsive center-block thumbnail" src="img/choose_snapshot.png" alt="Random Choice application snapshot">
+				
+			</div><!-- /.col-md-5 col-md-pull-7 -->
+			</div><!-- /.container item -->
+		</div><!-- /.row -->
+
+		<hr class="divider" />
+
+		<div class="row item">
+			<div class="container">
+				<div class="col-md-6">
+				<h3>
+					A Completely New Dynamic Website for ASIAA
+				</h3><!-- /.p-heading -->
+				<p>
+					Academia Sinica Institute of Astronomy & Astrophysics (ASIAA) is an academic institute where I worked as a webmaster several years ago. To be able to present the many research projects, groups, astronomy gallery, press release, information for colloquium and seminars of the institute, the site needed a database to hold the vast amount of information, and dynamic templates to be manageble and scalable. They also needed an internal platform for managing member's travel schedule and publication records. As a result, I rebuilt the originally static web site to a dynamic one with PHP and MySQL. The current interface was redesigned by successive webmasters. However, most of the base structrue, the UI logic, and the codes behind the scene remain the same. 
+				</p><!-- /.lead -->
+				<a href="http://www.asiaa.sinica.edu.tw" class="btn btn-default">Live Site</a>
+			</div><!-- /.col-md-7 col-md-push-5 -->			
+			<div class="col-md-6">
+				<img class="img-responsive center-block thumbnail" src="img/asiaa_snapshot-sm_2x.png" alt="ASIAA Website">
+			</div><!-- /.col-md-5 col-md-pull-7 -->
+			</div><!-- /.container item -->
+		</div><!-- /.row -->
+
+	</div><!-- /#portfolio.container-fluid main -->
+
+
+	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -152,6 +182,4 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/googleAnalytics.js"></script>
 </body>
-</body>
-
 </html>

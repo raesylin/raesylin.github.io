@@ -1,9 +1,12 @@
+@body-font: ~'"Source Sans Pro", sans-serif';
+@branding-font: ~'"IM Fell English SC", serif';
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
 body {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: @body-font;
   background-color: white;
   font-weight: lighter;
 }
@@ -30,7 +33,7 @@ footer {
 }
 
 .brand-font {
-	font-family: 'IM Fell English SC', serif;
+	font-family: @branding-font;
 }
 
 .navbar-brand {
@@ -51,7 +54,7 @@ h1 {
 
 
 .first-slide {
-	bottom: 0px;
+	bottom: 0;
 	position: absolute;
   width: 100%;
   height: auto;
@@ -153,6 +156,9 @@ body {
   min-height: 500px;
 }
 
+.carousel-inner .container {
+  position: relative;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
