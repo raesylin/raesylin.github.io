@@ -1,0 +1,28 @@
+
+/* My own css normalization */
+
+	*, *:before, *:after { @include box-sizing(border-box); }
+
+	html,
+	body {
+		width: 100%;
+	}
+
+	/* Clearfix */
+	.clearfix:before,
+	.clearfix:after {
+		content: "";
+		display: table;
+	}
+
+	.clearfix:after {
+		clear: both;
+	}
+
+	.clearfix {
+		zoom: 1;
+	}
+
+	/* End Clearfix */
+
+/* End of my own css normalization */
