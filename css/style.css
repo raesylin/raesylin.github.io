@@ -476,7 +476,7 @@ header {
   width: 100%;
   min-height: 500px;
   background-color: transparent;
-  background: url("../img/brand-img-may-resize.jpg") no-repeat 0 0;
+  background: url("../img/snowysky.jpg") no-repeat 0 0;
   background-size: cover; }
   @media only screen and (max-width: 480px) {
     header {
@@ -519,10 +519,23 @@ header {
 
 .branding p {
   font-size: 135%;
-  color: gainsboro; }
+  color: #9d9d9d;
+  text-shadow: none; }
   @media only screen and (max-width: 480px) {
     .branding p {
       font-size: 100%; } }
+
+.image-credit {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  font-size: 10px;
+  font-weight: lighter;
+  color: dimgrey;
+  padding: 0; }
+  @media only screen and (max-width: 480px) {
+    .image-credit {
+      display: none; } }
 
 /* Main area styling */
 .main {
@@ -536,7 +549,8 @@ header {
   padding-top: 50px; }
 
 #about h2,
-#portfolio h2 {
+#portfolio h2,
+#skills h2 {
   font-family: "IM Fell English SC", serif;
   font-size: 400%;
   text-transform: lowercase;
@@ -549,7 +563,8 @@ header {
   font-family: "IM Fell English", serif;
   font-size: 18px;
   line-height: 1.5em;
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding: 0 50px; }
   @media only screen and (max-width: 480px) {
     .lead {
       font-family: "Source Sans Pro", sans-serif;
@@ -611,5 +626,9 @@ footer p {
   font-size: 12px;
   text-align: center;
   display: inline-block; }
+
+.note {
+  font-family: courier, serif;
+  font-size: 15px; }
 
 /*# sourceMappingURL=style.css.map */

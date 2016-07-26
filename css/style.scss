@@ -103,7 +103,8 @@ header {
 	width: 100%;
 	min-height: 500px;
 	background-color: transparent;
-	background: url('../img/brand-img-may-resize.jpg') no-repeat 0 0;
+	background: url('../img/snowysky.jpg') no-repeat 0 0;
+	// background: url('../img/brand-img-may-resize.jpg') no-repeat 0 0;
 	background-size: cover;
 
 	@include bp-phone {
@@ -157,13 +158,27 @@ header {
 
 .branding p {
 	font-size: 135%;
-	color: gainsboro;
+	color: #9d9d9d;
+	text-shadow: none;
 
 	@include bp-phone {
 		font-size: 100%;
 	}
 }
 
+.image-credit {
+	position: absolute;
+	bottom: 0;
+	right: 5px;
+	font-size: 10px;
+	font-weight: lighter;
+	color: dimgrey;
+	padding: 0;
+
+	@include bp-phone {
+		display: none;
+	}
+}
 /* Main area styling */
 .main {
 	margin-top: 80px;
@@ -179,7 +194,8 @@ header {
 }
 
 #about h2,
-#portfolio h2 {
+#portfolio h2,
+#skills h2 {
 	font-family: $serifFont;
 	font-size: 400%;
 	text-transform: lowercase;
@@ -196,6 +212,7 @@ header {
 	font-size: 18px;
 	line-height: 1.5em;
 	margin-top: 20px;
+	padding: 0 50px;
 
 	@include bp-phone {
 		font-family: $sansFont;
@@ -271,4 +288,9 @@ footer p {
 	font-size: 12px;
 	text-align: center;
 	display: inline-block;
+}
+
+.note {
+	font-family: courier, serif;
+	font-size: 15px;
 }
