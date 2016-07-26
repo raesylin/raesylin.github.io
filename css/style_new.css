@@ -145,4 +145,12 @@ header {
   border-radius: 0;
   border: none; }
 
+footer p {
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 12px;
+  text-align: center;
+  display: inline-block; }
+
 /*# sourceMappingURL=style_new.css.map */
