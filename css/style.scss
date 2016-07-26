@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'vendor/normalize';
 
 $sansFont: "Source Sans Pro", sans-serif;
 $serifFont: "IM Fell English SC", serif;
@@ -237,7 +238,19 @@ header {
 
 .item .btn {
 	border-radius: 0;
-	border: none;
+	border: 3px solid transparent;
+	transition: all 0.2s ease-in-out;
+	font-size: 20px;
+	font-weight: bolder;
+	float: right;
+	margin: 50px 80px 0 0;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.2), -1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.item .btn:hover {
+	color: firebrick;
+	font-weight: bolder;
+	background: gainsboro;
 }
 
 footer p {
