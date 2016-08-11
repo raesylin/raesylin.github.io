@@ -628,7 +628,7 @@ footer p {
   display: inline-block; }
 
 .note {
-  font-family: courier, serif;
+  font-family: courier, monospace;
   font-size: 15px; }
 
 /*# sourceMappingURL=style.css.map */
