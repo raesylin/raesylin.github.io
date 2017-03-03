@@ -520,7 +520,7 @@ header {
 
 .branding p {
   font-size: 200%;
-  color: #ffeb3b;
+  color: rgba(255, 169, 59, 0.8);
   font-weight: 400;
   /*text-shadow: none;*/ }
   @media only screen and (max-width: 480px) {
