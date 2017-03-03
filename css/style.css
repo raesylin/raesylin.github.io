@@ -589,7 +589,8 @@ header {
       letter-spacing: normal; } }
 
 .item p {
-  font-size: 18px; }
+  font-size: 18px;
+  line-height: 3.0rem; }
   @media only screen and (max-width: 480px) {
     .item p {
       text-align: justify; } }
